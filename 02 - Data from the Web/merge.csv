@@ -1,0 +1,161 @@
+,university,rank_qs,country,region,international students,total students,international faculties,total faculties,rank_times,proportion of international students(%),student/staff (%),proportion of international faculties (%)
+0,Massachusetts Institute of Technology,1,United States,North America,3717,11067,1679,2982,5,34.0,8.7,56.30449362843729
+1,Stanford University,2,United States,North America,3611,15878,2042,4285,3,22.0,7.5,47.65460910151692
+2,Harvard University,3,United States,North America,5266,22429,1311,4350,6,26.0,8.9,30.137931034482758
+3,California Institute of Technology,4,United States,North America,647,2255,350,953,3,27.0,6.5,36.72612801678909
+4,University of Cambridge,5,United Kingdom,Europe,6699,18770,2278,5490,2,35.0,10.9,41.4936247723133
+5,University of Oxford,6,United Kingdom,Europe,7353,19720,2964,6750,1,38.0,11.2,43.91111111111111
+6,University College London,7,United Kingdom,Europe,14854,31080,2554,6345,16,49.0,10.5,40.2521670606777
+7,Imperial College London,8,United Kingdom,Europe,8746,16090,2071,3930,8,55.0,11.4,52.6972010178117
+8,University of Chicago,9,United States,North America,3379,13557,635,2449,9,25.0,6.2,25.928950592078397
+9,ETH Zurich - Swiss Federal Institute of Technology,10,Switzerland,Europe,7563,19815,1886,2477,10,38.0,14.6,76.14049253128785
+10,"Nanyang Technological University, Singapore",11,Singapore,Asia,7251,25738,2993,4338,52,31.0,16.3,68.994928538497
+11,Ecole Polytechnique Federale de Lausanne,12,Switzerland,Europe,5896,10343,1300,1695,38,55.0,11.2,76.69616519174042
+12,Princeton University,13,United States,North America,1793,8069,246,1007,7,24.0,8.3,24.42899702085402
+13,Cornell University,14,United States,North America,5411,21904,970,2718,19,24.0,9.8,35.68800588668138
+14,National University of Singapore,15,Singapore,Asia,8917,32728,3086,5106,22,30.0,17.0,60.43869956913434
+15,Yale University,16,United States,North America,2469,12402,1708,4940,12,21.0,4.3,34.5748987854251
+16,Johns Hopkins University,17,United States,North America,4105,16146,1061,4462,13,24.0,4.3,23.778574630210667
+17,Columbia University,18,United States,North America,8105,25045,913,6189,14,32.0,6.1,14.751979318145095
+18,University of Pennsylvania,19,United States,North America,4250,20639,1383,5499,10,20.0,6.5,25.150027277686853
+19,Australian National University,20,Australia,Oceania,5551,14442,927,1600,48,35.0,19.3,57.9375
+20,Duke University,21,United States,North America,2864,15320,226,2938,17,22.0,4.5,7.6923076923076925
+21,University of Michigan,21,United States,North America,7527,43147,1920,6809,21,16.0,8.6,28.197973270671174
+22,King's College London,23,United Kingdom,Europe,9451,23780,1513,3650,36,41.0,12.0,41.45205479452055
+23,University of Edinburgh,23,United Kingdom,Europe,10551,28040,1553,4075,27,40.0,12.5,38.11042944785276
+24,Tsinghua University,25,China,Asia,4072,36300,932,5506,30,9.0,13.7,16.926988739556847
+25,University of Hong Kong,26,Hong Kong,Asia,8230,20214,2085,3012,40,42.0,18.0,69.22310756972112
+26,"University of California, Berkeley",27,United States,North America,6086,36703,1395,3321,18,17.0,13.1,42.00542005420054
+27,Northwestern University,28,United States,North America,3422,18675,1141,4231,20,18.0,12.8,26.967619948002834
+28,University of Tokyo,28,Japan,Asia,2639,27279,254,4514,46,10.0,6.7,5.62693841382366
+29,Hong Kong University of Science and Technology,30,Hong Kong,Asia,2921,10375,835,1150,44,31.0,23.1,72.60869565217392
+30,University of Toronto,31,Canada,North America,21910,72207,3905,9581,22,17.0,18.7,40.7577497129736
+31,McGill University,32,Canada,North America,9540,28837,1220,3646,42,26.0,13.3,33.461327482172244
+32,"University of California, Los Angeles",33,United States,North America,6887,40114,662,2859,15,17.0,9.6,23.154949282966072
+33,University of Manchester,34,United Kingdom,Europe,13514,36670,1653,4910,54,38.0,14.6,33.66598778004074
+34,London School of Economics and Political Science,35,United Kingdom,Europe,6748,9760,687,1088,25,71.0,12.2,63.14338235294118
+35,Kyoto University,36,Japan,Asia,1990,22974,293,4060,74,8.0,8.7,7.216748768472907
+36,Seoul National University,36,South Korea,Asia,2331,28064,433,3930,74,11.0,12.6,11.017811704834605
+37,Peking University,38,China,Asia,7090,42136,1038,5185,27,16.0,8.9,20.019286403085825
+38,"University of California, San Diego",38,United States,North America,6644,32237,870,3694,31,17.0,12.8,23.551705468327018
+39,Fudan University,40,China,Asia,4680,29135,1178,4037,116,10.0,12.1,29.180084220956154
+40,Korea Advanced Institute of Science and Technology,41,South Korea,Asia,584,9826,147,1250,95,9.0,10.6,11.76
+41,University of Melbourne,41,Australia,Oceania,18030,42182,1477,3311,32,40.0,26.6,44.60887949260042
+42,University of Bristol,44,United Kingdom,Europe,5099,20630,942,2870,76,27.0,13.7,32.822299651567945
+43,University of New South Wales,45,Australia,Oceania,14292,39784,1612,2924,85,34.0,26.7,55.12995896032832
+44,Chinese University of Hong Kong,46,Hong Kong,Asia,4824,18037,1074,2208,58,31.0,17.3,48.641304347826086
+45,Carnegie Mellon University,47,United States,North America,6385,13356,425,1342,24,45.0,13.5,31.66915052160954
+46,University of Queensland,47,Australia,Oceania,10420,37497,1870,3158,65,26.0,35.7,59.21469284357188
+47,City University of Hong Kong,49,Hong Kong,Asia,3273,9240,1027,1349,119,35.0,11.2,76.13046701260193
+48,University of Sydney,50,Australia,Oceania,17030,46678,1829,3360,61,32.0,21.6,54.4345238095238
+49,University of British Columbia,51,Canada,North America,11388,50350,1635,4648,34,29.0,18.1,35.17641996557659
+50,New York University,52,United States,North America,0,0,0,0,27,26.0,9.6,
+51,Brown University,53,United States,North America,1825,9251,379,1303,50,20.0,10.7,29.086722947045278
+52,Delft University of Technology,54,Netherlands,Europe,4634,16527,701,1669,63,27.0,19.6,42.001198322348706
+53,University of Wisconsin-Madison,55,United States,North America,4920,38985,1151,5722,43,12.0,10.7,20.11534428521496
+54,University of Warwick,57,United Kingdom,Europe,7703,19855,890,2093,91,39.0,13.0,42.522694696607736
+55,University of Amsterdam,58,Netherlands,Europe,3785,25967,707,2600,59,12.0,12.3,27.192307692307693
+56,Ecole Polytechnique,59,France,Europe,924,3126,259,649,115,36.0,5.1,39.907550077041606
+57,Monash University,60,Australia,Oceania,20578,57433,1679,3204,80,28.0,33.7,52.403245942571786
+58,University of Washington,61,United States,North America,8373,56973,550,2484,25,16.0,11.4,22.14170692431562
+59,Shanghai Jiao Tong University,62,China,Asia,2858,38931,887,3544,188,6.0,12.4,25.02821670428894
+60,Technical University of Munich,64,Germany,Europe,6181,38726,1174,5850,41,23.0,54.4,20.068376068376068
+61,University of Glasgow,65,United Kingdom,Europe,8149,23815,956,2775,80,36.0,15.4,34.45045045045045
+62,Ludwig-Maximilians-Universitat Munchen,66,Germany,Europe,5084,35055,674,3274,34,15.0,15.6,20.586438607208308
+63,University of Texas at Austin,67,United States,North America,4744,47995,108,2833,49,10.0,17.1,3.812213201553124
+64,Heidelberg University,68,Germany,Europe,5298,28852,756,3908,45,17.0,23.2,19.34493346980553
+65,University of Illinois at Urbana-Champaign,69,United States,North America,9483,42427,259,2554,37,23.0,22.8,10.14095536413469
+66,Georgia Institute of Technology,70,United States,North America,4761,21082,75,1133,33,27.0,20.7,6.619593998234776
+67,KU Leuven,71,Belgium,Europe,6926,45538,784,2515,47,15.0,37.1,31.17296222664016
+68,Pohang University of Science And Technology,71,South Korea,Asia,126,3117,113,664,137,4.0,10.4,17.018072289156628
+69,University of Copenhagen,73,Denmark,Europe,3683,32119,2336,7483,109,14.0,4.1,31.217426165976214
+70,University of Zurich,73,Switzerland,Europe,5036,26065,2617,4997,136,20.0,5.9,52.371422853712225
+71,National Taiwan University,76,Taiwan,Asia,3152,32195,220,2807,198,8.0,11.5,7.837548984681154
+72,Durham University,78,United Kingdom,Europe,4690,16745,586,1539,97,29.0,14.9,38.07667316439246
+73,Lund University,78,Sweden,Europe,6408,27786,1002,3031,93,16.0,12.1,33.05839656878918
+74,"University of North Carolina, Chapel Hill",80,United States,North America,1934,25373,524,4083,56,8.0,9.7,12.833700710262061
+75,Boston University,81,United States,North America,7041,25662,379,3157,70,25.0,8.6,12.005068102629078
+76,University of Auckland,82,New Zealand,Oceania,8568,29641,645,2047,192,29.0,18.8,31.509526135808503
+77,University of Sheffield,82,United Kingdom,Europe,8745,25430,938,3065,104,36.0,14.9,30.603588907014682
+78,University of Nottingham,84,United Kingdom,Europe,7993,29165,1135,3360,147,30.0,14.0,33.779761904761905
+79,University of Birmingham,84,United Kingdom,Europe,7795,28660,1028,2962,141,27.0,15.0,34.70627954085078
+80,Ohio State University,86,United States,North America,6874,43156,1696,5911,70,13.0,12.7,28.692268651666385
+81,Zhejiang University,87,China,Asia,4625,40869,1913,4507,177,6.0,14.1,42.44508542267584
+82,Trinity College Dublin,88,Ireland,Europe,4311,14961,544,1249,117,27.0,22.8,43.55484387510008
+83,Rice University,89,United States,North America,1847,6610,316,969,86,28.0,9.0,32.6109391124871
+84,University of Alberta,90,Canada,North America,8203,31765,1294,3561,119,26.0,21.6,36.33810727323785
+85,University of St Andrews,92,United Kingdom,Europe,4030,8800,485,1140,143,48.0,13.0,42.54385964912281
+86,Pennsylvania State University,93,United States,North America,7081,45612,211,3509,77,14.0,15.2,6.013109147905387
+87,University of Western Australia,93,Australia,Oceania,4575,18531,809,1420,111,25.0,21.8,56.971830985915496
+88,Lomonosov Moscow State University,95,Russia,Europe,5098,30233,373,6709,194,22.0,7.3,5.559695930839171
+89,Hong Kong Polytechnic University,95,Hong Kong,Asia,5251,20972,1275,2447,182,25.0,26.9,52.10461789946874
+90,University of Science and Technology of China,97,China,Asia,548,16032,155,1992,132,3.0,8.2,7.781124497991968
+91,KTH Royal Institute of Technology,98,Sweden,Europe,1937,12658,494,1500,173,17.0,16.0,32.93333333333333
+92,University of Geneva,98,Switzerland,Europe,6104,15844,1029,1752,130,40.0,15.1,58.73287671232876
+93,Washington University in St. Louis,100,United States,North America,2706,13474,784,2699,50,17.0,7.5,29.047795479807338
+94,University of Leeds,101,United Kingdom,Europe,7534,29645,870,3025,139,26.0,14.7,28.760330578512395
+95,University of Helsinki,102,Finland,Europe,1234,22419,535,2645,90,6.0,16.2,20.226843100189036
+96,University of Southampton,102,United Kingdom,Europe,7789,23775,1017,2820,126,33.0,12.5,36.06382978723404
+97,Eindhoven University of Technology,104,Netherlands,Europe,1275,7636,322,801,141,17.0,18.6,40.19975031210986
+98,Purdue University,105,United States,North America,8787,38143,1334,3247,60,23.0,17.4,41.08407761010163
+99,Karlsruhe Institute of Technology,107,Germany,Europe,4809,26081,410,1827,133,18.0,26.3,22.441160372194854
+100,Sungkyunkwan University,108,South Korea,Asia,2818,23921,324,3556,111,12.0,19.6,9.111361079865016
+101,Leiden University,109,Netherlands,Europe,3488,26513,581,2324,67,12.0,18.2,25.0
+102,University of Adelaide,109,Australia,Oceania,8114,21240,633,1729,134,26.0,34.3,36.61075766338924
+103,Utrecht University,109,Netherlands,Europe,2771,31754,653,3067,68,7.0,15.2,21.29116400391262
+104,Uppsala University,112,Sweden,Europe,5198,25371,584,2567,86,11.0,17.3,22.75029216984807
+105,University of Groningen,113,Netherlands,Europe,10780,27549,1137,3351,83,17.0,24.1,33.930170098478065
+106,Nanjing University,114,China,Asia,2960,32495,617,2449,169,10.0,14.2,25.193956717027362
+107,Technical University of Denmark,116,Denmark,Europe,2098,8878,966,2117,153,24.0,6.0,45.63060935285782
+108,"University of California, Davis",118,United States,North America,4529,34244,549,3843,54,10.0,13.8,14.285714285714285
+109,Aarhus University,119,Denmark,Europe,3762,26226,602,2316,109,12.0,14.3,25.99309153713299
+110,Humboldt University of Berlin,120,Germany,Europe,4805,33198,407,1966,62,17.0,56.5,20.701932858596134
+111,Wageningen University,124,Netherlands,Europe,3613,12695,323,2277,64,29.0,19.7,14.185331576635923
+112,Free University of Berlin,125,Germany,Europe,5735,32912,305,1375,88,21.0,57.0,22.181818181818183
+113,Ghent University,125,Belgium,Europe,3766,35968,482,2520,107,10.0,35.9,19.126984126984127
+114,Queen Mary University of London,127,United Kingdom,Europe,6806,16135,801,1885,121,45.0,13.3,42.49336870026525
+115,"University of Maryland, College Park",129,United States,North America,4683,35504,473,3920,69,10.0,16.5,12.066326530612246
+116,University of Montreal,130,Canada,North America,9688,39112,1037,2961,108,22.0,21.9,35.02195204322864
+117,Pierre and Marie Curie University,131,France,Europe,4213,24305,253,2273,123,20.0,12.3,11.130664320281566
+118,University of Southern California,132,United States,North America,9170,38749,551,3124,66,23.0,12.8,17.63764404609475
+119,"University of California, Santa Barbara",134,United States,North America,2128,23149,267,1449,53,14.0,28.1,18.426501035196686
+120,Lancaster University,135,United Kingdom,Europe,4464,12300,435,1245,150,38.0,13.1,34.93975903614458
+121,University of York,135,United Kingdom,Europe,3364,15999,636,1833,137,27.0,15.1,34.697217675941076
+122,Aalto University,137,Finland,Europe,1831,12147,370,1257,190,20.0,20.2,29.4351630867144
+123,Cardiff University,137,United Kingdom,Europe,6090,24565,705,2755,162,26.0,13.5,25.58983666061706
+124,McMaster University,140,Canada,North America,3548,23702,1170,3231,78,15.0,24.7,36.211699164345404
+125,RWTH Aachen University,141,Germany,Europe,8556,44517,449,3176,79,18.0,57.7,14.137279596977331
+126,University of Oslo,142,Norway,Europe,3667,24304,711,2509,146,19.0,18.6,28.337983260263055
+127,University of Pittsburgh,142,United States,North America,2937,26393,572,4982,100,10.0,5.9,11.481332798073062
+128,Technical University of Berlin,144,Germany,Europe,4494,22176,377,2562,92,20.0,64.3,14.715066354410617
+129,University of Lausanne,146,Switzerland,Europe,3337,13435,1031,2173,152,25.0,13.6,47.44592728946158
+130,Emory University,147,United States,North America,2154,12852,484,2560,98,19.0,4.4,18.90625
+131,Erasmus University Rotterdam,147,Netherlands,Europe,5229,23273,458,2011,72,20.0,20.1,22.77473893585281
+132,Michigan State University,149,United States,North America,7427,44951,653,2884,83,17.0,17.0,22.642163661581137
+133,University of Basel,149,Switzerland,Europe,3441,12852,684,1057,95,27.0,17.7,64.71144749290445
+134,Universite catholique de Louvain,153,Belgium,Europe,4468,24277,406,1219,129,19.0,37.8,33.305988515176374
+135,University of Vienna,154,Austria,Europe,14468,45967,1400,3411,165,26.0,20.8,41.04368220463207
+136,Ecole Normale Superieure de Lyon,157,France,Europe,221,2020,91,382,182,13.0,8.5,23.82198952879581
+137,University of Aberdeen,158,United Kingdom,Europe,4246,12005,508,1310,185,36.0,13.9,38.778625954198475
+138,University of Exeter,158,United Kingdom,Europe,5504,20749,597,1756,130,28.0,17.5,33.99772209567198
+139,Newcastle University,161,United Kingdom,Europe,5717,21673,835,2428,175,30.0,15.6,34.390444810543656
+140,University of Minnesota,163,United States,North America,6542,59742,195,4919,56,11.0,17.4,3.964220369993901
+141,University of Tubingen,164,Germany,Europe,3860,27366,796,3844,94,13.0,38.5,20.707596253902185
+142,"University of California, Irvine",164,United States,North America,8538,32151,377,1926,99,21.0,17.0,19.574247144340603
+143,University of Bern,167,Switzerland,Europe,1618,10758,661,1172,105,15.0,16.5,56.399317406143346
+144,Dartmouth College,169,United States,North America,945,6224,27,939,89,15.0,6.6,2.8753993610223643
+145,University of Freiburg,171,Germany,Europe,3897,23214,413,1966,82,19.0,40.3,21.00712105798576
+146,University of Liverpool,173,United Kingdom,Europe,7502,22065,717,2390,177,35.0,11.7,30.0
+147,University of Virginia,173,United States,North America,1899,21560,487,2509,113,12.0,9.7,19.410123555201274
+148,University of Florida,178,United States,North America,4597,45485,504,5419,143,9.0,17.5,9.300608968444363
+149,University of Twente,179,Netherlands,Europe,2235,9332,299,910,179,27.0,12.8,32.857142857142854
+150,University of Göttingen,181,Germany,Europe,3736,30402,641,3678,113,12.0,27.9,17.42794997281131
+151,University of Colorado Boulder,182,United States,North America,2679,30219,566,3685,100,10.0,16.3,15.359565807327002
+152,University of Rochester,186,United States,North America,2805,9636,488,2569,153,29.0,4.3,18.995718178279485
+153,University of Cape Town,191,South Africa,Africa,3325,19593,379,1733,171,18.0,11.7,21.869590305828044
+154,Scuola Normale Superiore di Pisa,192,Italy,Europe,48,532,1,86,184,7.0,5.2,1.1627906976744187
+155,Stockholm University,195,Sweden,Europe,2636,28281,646,2154,134,8.0,24.9,29.99071494893222
+156,Technische Universitat Dresden,281,Germany,Europe,4929,34029,669,4913,155,13.0,35.9,13.616934663138611
+157,Texas A&M University,195,United States,North America,4900,60294,206,3446,159,9.0,23.6,5.977945443993035
+158,Autonomous University of Barcelona,195,Spain,Europe,3848,31986,230,2187,147,16.0,12.9,10.516689529035208
+159,Maastricht University,200,Netherlands,Europe,8234,16385,502,1277,103,50.0,18.0,39.31088488645263
