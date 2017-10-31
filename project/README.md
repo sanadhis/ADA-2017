@@ -14,15 +14,59 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 # Research questions
 Throughout this project, we want to address the following questions:
 - What is the characteristic/metrics of popular songs? What are the challenges that music industry faces? Can we analyze and predict the trend in music industry from years to years?
-- Does the herding bias for hearing songs really happen in our society? Do people tend to listen to famous singers rathen than the songs themselves? Can we say that the career path for singers began by covering songs which come originally from famous artists?
+- Does the herding bias for hearing songs really happen in our society? Do people tend to listen to famous singers rather than the songs themselves? Can we say that the career path for singers began by covering songs which come originally from famous artists?
 - Do people care more about lyrics? Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
 - Can we find plagiarisms in music industry? How often people mimick popular songs? Can we find more similliarities from popular songs compared to unpopular ones? What kind of similiarities?
 
 # Dataset
-1. [The SecondHandSongs Dataset](https://labrosa.ee.columbia.edu/millionsong/secondhand)
-2. [The musiXmatch Dataset](https://labrosa.ee.columbia.edu/millionsong/musixmatch)
-3. [The Last.fm Dataset](https://labrosa.ee.columbia.edu/millionsong/lastfm)
-4. [The Echo Nest Taste Profile Subset](https://labrosa.ee.columbia.edu/millionsong/tasteprofile)
+1. [The SecondHandSongs Dataset](https://labrosa.ee.columbia.edu/millionsong/secondhand) :
+
+FORMAT:
+      
+      Single .txt file: shs_dataset_train.txt
+      #                    - comment, ignore
+      %a,b,c, title        - beginning of a clique. a,b,c are work IDs (negative if not available)
+      TID<SEP>AID<SEP>perf - track ID from the MSD (plus artist ID and SHS performance)
+It contains a mapping between original songs and cover songs contained in the million songs dataset in the form of cliques. This will mainly help us to answer the second question mentionned above.
+
+2. [The musiXmatch Dataset](https://labrosa.ee.columbia.edu/millionsong/musixmatch) :
+
+FORMAT:
+
+      Single .txt file: mxm_dataset_train.txt
+      #   - comment, to ignore
+      %   - list of top words, comma-separated
+          - normal line, contains track_id, mxm track id,
+            then word count for each of the top words, comma-separated
+            word count is in sparse format -> ...,<word idx>:<cnt>,...
+            <word idx> starts at 1 (not zero!)
+
+Which contains the lyrics from a subset of the original dataset songs. For every track in this dataset the lyrics are represented using a bag-of-words format obtained by stemming. This will allow us to address the third research question in particular.
+
+3. [The Last.fm Dataset](https://labrosa.ee.columbia.edu/millionsong/lastfm) :
+
+FORMAT:
+
+      Several .json files in different directory (A-Z)
+      Keys in .json files:
+      'tags'       - style of the song such as rock, hard rock
+      'artist'     - name of the singer
+      'title'      - name of the song
+      'timestamps' - date
+      'similar'    - similarity measure of songs, range from 0 to 1 
+      
+For every songs it gives both a list of tags that defines the song (genre, instruments...) and a list of similar songs alongside the value of the similarity measure that was used. The dataset will come in quiet handy when checking for plagiarism or high ressemblance.
+
+4. [The Echo Nest Taste Profile Subset](https://labrosa.ee.columbia.edu/millionsong/tasteprofile) :
+
+FORMAT:
+
+      Single .txt file: train_triplets.txt
+      user   - ID of users
+      song   - the song they listen
+      count  - how many times the user listens to this song
+      
+This represents the profiles of real users in which we can find for every profile the play count for some song in the original dataset. It covers about a third of the tracks available in the million songs dataset and will give us a good representation of the musical trend.
 
 # A list of internal milestones up until project milestone 2
 |Week #|Targets|
@@ -43,7 +87,7 @@ The Million Song Dataset. In Proceedings of the 12th International Society
 for Music Information Retrieval Conference (ISMIR 2011), 2011.
 
 ## Team - ITT
-[Project Repository Page](https://github.com/sanadhis/songs-project)
+[Project Repository Page](https://github.com/sanadhis/ITT-ADA-2017/tree/master/project)
 - Cheng-Chun Lee ([@wlo2398219](https://github.com/wlo2398219)) : (cheng-chun.lee@epfl.ch)
 - Sanadhi Sutandi ([@sanadhis](https://github.com/sanadhis)) : (i.sutandi@epfl.ch)
 - Skander Hajri ([@Skan000](https://github.com/Skan000)) : (skander.hajri@epfl.ch)
