@@ -10,7 +10,7 @@
 - 02 - Data from the Web: Homework 2
 - 03 - Interactive Viz: Homework 3
 - 04 - TBD: Homework 4
-- project: Project directory (read the README.md inside for more detail)
+- project: Our Songs Project directory (read the README.md inside for more detail)
 
 ## Team
 
