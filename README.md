@@ -9,7 +9,7 @@
 - 01 - Pandas and Data Wrangling : Homework 1
 - 02 - Data from the Web: Homework 2
 - 03 - Interactive Viz: Homework 3
-- 04 - TBD: Homework 4
+- 04 - Applied ML: Homework 4
 - project: Our Songs Project directory (read the README.md inside for more detail)
 
 ## Team
