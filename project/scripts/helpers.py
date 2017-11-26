@@ -1,3 +1,6 @@
+import pandas as pd
+from IPython.display import display
+
 def debug_dataframe(df):
     """Function to observe dataframe structures (rows, columns) in general.
     Inputs:
