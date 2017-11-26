@@ -46,3 +46,15 @@ def read_saved_dataframe(filename):
     
     df = pd.read_pickle("./datasets/processed_pickle_files/" + filename)
     return df
+
+def copy_dataframe(df):
+    """Function to copy a dataframe content into a new dataframe object.
+    Inputs:
+        df     (panda dataframe) : original dataframe.
+    Returns:
+        df_new (panda dataframe) : new dataframe copy.
+    """
+    
+    df_new = pd.DataFrame(index=df.index)
+    df_new = df.copy()
+    return df_new
