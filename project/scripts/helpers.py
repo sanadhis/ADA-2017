@@ -58,3 +58,15 @@ def copy_dataframe(df):
     df_new = pd.DataFrame(index=df.index)
     df_new = df.copy()
     return df_new
+
+def save_map(map_name, filename):
+    """Function to save folium map into html file.
+    Inputs:
+        map_name (folium map) : map we want to save.
+        filename (string)     : filename for the map
+    Returns:
+        None
+    """
+    
+    map_filename = "maps/"+filename+".html"
+    map_name.save(map_filename)
