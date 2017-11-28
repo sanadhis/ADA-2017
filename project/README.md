@@ -38,6 +38,7 @@ The project's main goal is to prove how society reacts to songs' quality over ti
     │
     ├── scripts                              : Directory containing helpers script for our main.ipynb notebook.
 
+
 --------
 
 # Data Aqusition & Initial Data Preprocessing
