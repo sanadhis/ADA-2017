@@ -28,18 +28,29 @@ Our question is decomposed into 3 blocks of questions:
 ### Q2.1 Does the herding bias for hearing songs really happen in our society?
 Herding bias means somebody would listen to several songs sung by specific singers. When we have a postive impression on the first song we hear from this singer, it's possible that we want to listen to other songs from this singer. And usually it's more likely we would love other songs from him/her, no matter whether he/she is famous.
 #### Design of experiment
-
-### Q2.2 Do people tend to listen to famous singers rather than the songs themselves?
-#### Design of experiment
 * Load the dataset into dataframe & sampling
 * Quick observation of the dataset
 * Map Song_ID to the singer names and observe whether there're songs from the same singer
 * Define a way to measure the level of herding bias of the user
 * Visualize the level of herding bias
 * Observation & Comment
+### Q2.2 Do people tend to listen to famous singers rather than the songs themselves?
+In other words, we want to see whether the songs sung by popular singers are usually popular.
+#### Design of experiment
+* Load the dataset into dataframe & data wrangling
+* Choose several popular/unpopular singers and extract their songs
+* Compare the song_hotttnesss of songs from popular singers and unpopular singers
+* Visualize to show the difference of song_hotttnesss between popular singers and unpopular singers
+* Observation & Comment 
 
 ### Q2.3 Whether the first song of the singer matters for his/her career
+In this problem, we also focus on popular singers. We want to see whether the first song of this singer has some correlation with his/her career. To be more precise, we want to see whether the first song of the popular singer is usually popular, and the first songs opens his/her career. In real world, we could really find this phenomenon, for example, the korean singer psy became famous with the song 'gangnam style'.
 #### Design of experiment:
+* Load the dataset into dataframe
+* Data wrangling & Choose several popular/unpopular singers and extract their songs in the first year
+* See the meidan of song_hotttnesss in the 1st year of the singers
+* Visualize to show the correlation
+* Observation & Comment 
 
 ## Question Block 3
 
