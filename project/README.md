@@ -128,7 +128,7 @@ This represents the profiles of real users in which we can find for every profil
 |Week 4<br>**21.11.2017 - 28.11.2017**|<ul><li>Analyze the temporary results.</li><li> Review works and ensure completion for milestone 2.</li></ul>|
 |Week 5<br>**28.11.2017 - 05.12.2017**|<ul><li>Final check with our results.</li><li> Decide the way to present our work(report or data story).</li></ul>|
 |Week 6<br>**05.12.2017 - 12.12.2017**|<ul><li>Work on report/data story.</li><li> Improve the organization of notebook and improve the space/time efficiency.</li></ul>|
-|Week 7<br>**12.12.2017 - 19.12.2017**|<ul><li>Finalize report/data story and notebook.</li><li>|
+|Week 7<br>**12.12.2017 - 19.12.2017**|<ul><li>Finalize report/data story and notebook.</li></ur>|
 
 # Questions for TAs
 Add here some questions you have for us, in general or project-specific.
