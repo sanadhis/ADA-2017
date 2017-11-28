@@ -119,13 +119,16 @@ FORMAT:
       
 This represents the profiles of real users in which we can find for every profile the play count for some song in the original dataset. It covers about a third of the tracks available in the million songs dataset and will give us a good representation of the musical trend.
 
-# A list of internal milestones up until project milestone 2
+# A list of internal milestones up until milestone 3
 |Week #|Targets|
 |---|---|
 |Week 1<br>**01.11.2017 - 07.11.2017**|<ul><li>Getting started with cluster processing (spark, hadoop).</li><li> Initial data processing: Reading data, cleaning and wrangling, merging dataset.</li></ul>|
 |Week 2<br>**07.11.2017 - 14.11.2017**|<ul><li>Begin to address research questions.</li><li> Initial analysis of data, finding correlations.</li></ul>|
 |Week 3<br>**14.11.2017 - 21.11.2017**|<ul><li>Initial mockup for python scripts and notebooks.</li><li> Visualize data in several ways: charts, maps, images, and so on.</li></ul>|
 |Week 4<br>**21.11.2017 - 28.11.2017**|<ul><li>Analyze the temporary results.</li><li> Review works and ensure completion for milestone 2.</li></ul>|
+|Week 5<br>**28.11.2017 - 05.12.2017**|<ul><li>Analyze the temporary results.</li><li> Review works and ensure completion for milestone 2.</li></ul>|
+|Week 6<br>**05.12.2017 - 12.12.2017**|<ul><li>Analyze the temporary results.</li><li> Review works and ensure completion for milestone 2.</li></ul>|
+|Week 7<br>**12.12.2017 - 19.12.2017**|<ul><li>Analyze the temporary results.</li><li> Review works and ensure completion for milestone 2.</li></ul>|
 
 # Questions for TAs
 Add here some questions you have for us, in general or project-specific.
