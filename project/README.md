@@ -14,17 +14,17 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 # Project Structure
 ------------
 
-    ├── main.ipynb                           : The main notebook for the our songs project, answering research questions.
+    ├── main.ipynb                           : The main notebook for the our songs project, accumulating all answers for research questions (Question 1-3).
     ├── README.md                            : The README guideline and explanation for our work.
     ├── 00raw_datasets_observation.ipynb     : Notebook contains initial observation for Million Songs datasets.
     ├── 00raw_datasets_preprocessings.ipynb  : Notebook contains initial preprocessing for raw datasets files.
-    ├── Part1.ipynb                          : Answers and explanations for Question block 1.
-    ├── Part2.ipynb                          : Answers and explanations for Question block 2.
-    ├── Part3.ipynb                          : Answers and explanations for Question block 3.
+    ├── Part1.ipynb                          : (Specific) Answers and explanations for Question block 1.
+    ├── Part2.ipynb                          : (Specific) Answers and explanations for Question block 2.
+    ├── Part3.ipynb                          : (Specific) Answers and explanations for Question block 3.
     |
     ├── datasets
     │   ├── pickle_files                     : Directory containing files of raw datasets, with pickle format & reduced in size.
-    │   ├── processed_pickle_files          : Directory containing processed (reduced & filtered) datasets.
+    │   ├── processed_pickle_files           : Directory containing processed (reduced & filtered) datasets.
     │   ├── raw_files                        : Directory containing raw datasets files (h5, csv, txt formats).
     │
     ├── maps                                 : Directory containing maps for certain results in html format.
@@ -35,7 +35,7 @@ The project's main goal is to prove how society reacts to songs' quality over ti
     │
     ├── report                               : Directory containing templates for final report.
     │
-    ├── scripts                              : Directory containing helpers script for our main.ipynb notebook.
+    ├── scripts                              : Directory containing helper scripts for our main.ipynb notebook.
 
 
 --------
