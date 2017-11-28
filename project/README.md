@@ -41,13 +41,13 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 --------
 
 # Data Aqusition & Initial Data Preprocessing
-The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets is spreaded in A-Z directories and contains additional datasets (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as pickle files. We choose to use pickle format to boost loading time for later load the data in notebook.
+The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets are spreaded in A-Z directories and come along with additional datasets (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as 12 pickle files. We decide to use pickle format to boost loading time for later data loading process in notebook.
 
 > Check our notebook for [initial processing of raw files](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_preprocessings.ipynb) and [datasets brief description](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_observation.ipynb) to have more clear insight for our initial data preprocessing methods.
 
-For our main datasets, "msd_songs", we filter one million song entries by removing songs without hotttnesss and then get about five hundred thousands songs (reduced almost half). The rest of processing are adjusted with each of our questions' need.
+For our main datasets, "msd_songs", we filter one million song entries by simply removing songs without hotttnesss. Then we obtain about five hundred thousands songs (reduced almost half) at maximum to address our questions. However, the rest of data wrangling processes are adjusted based on each of our questions' need.
 
-**Note that the datasets' pickle files are relatively big in term of size, thus we do not include it in our repository**
+**Note that the datasets' pickle files are relatively big in term of size, thus we do not include them in our repository.**
 
 # Research questions
 Our questions are decomposed into 3 blocks of questions:
