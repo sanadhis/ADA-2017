@@ -16,15 +16,16 @@ Our questions are decomposed into 3 blocks of questions:
 ## Question Block 1: What could make songs popular
 
 ### Q1.1 What is the characteristic/metrics of popular songs?
-
 #### Design of experiment:
 
 ### Q1.2 What are the challenges that music industry faces?
 #### Design of experiment:
 
-#### Q1.3 Can we analyze and predict the trend in music industry from years to years?
- 
+### Q1.3 Can we analyze and predict the trend in music industry from years to years?
+#### Design of experiment:
+
 ## Question Block 2: What could make singers popular
+
 ### Q2.1 Does the herding bias for hearing songs really happen in our society?
 Herding bias means somebody would listen to several songs sung by specific singers. When we have a postive impression on the first song we hear from this singer, it's possible that we want to listen to other songs from this singer. And usually it's more likely we would love other songs from him/her, no matter whether he/she is famous.
 #### Design of experiment
