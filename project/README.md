@@ -60,14 +60,6 @@ In this problem, we also focus on popular singers. We want to see whether the fi
 ### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
 #### Design of experiment:
 
-
-
-Throughout this project, we want to address the following questions:
--  What are the challenges that music industry faces? Can we analyze and predict the trend in music industry from years to years?
-- Does the herding bias for hearing songs really happen in our society? Do people tend to listen to famous singers rather than the songs themselves? Can we say that the career path for singers began by covering songs which come originally from famous artists?
-- Do people care more about lyrics? Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
-- Can we find plagiarisms in music industry? How often people mimick popular songs? Can we find more similliarities from popular songs compared to unpopular ones? What kind of similiarities?
-
 # Dataset
 1. [The SecondHandSongs Dataset](https://labrosa.ee.columbia.edu/millionsong/secondhand) :
 
