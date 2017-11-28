@@ -11,6 +11,35 @@ Through this project, we would like to show how people tend to listen to songs, 
 
 The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music industry towards time.
 
+# Project Structure
+------------
+
+├── project
+    ├── main.ipynb                           : The main notebook for the our songs project, answering research questions.
+    ├── README.md                            : The README guideline and explanation for our work.
+    ├── 00raw_datasets_observation.ipynb     : Notebook contains initial observation for Million Songs datasets.
+    ├── 00raw_datasets_preprocessings.ipynb  : Notebook contains initial preprocessing for raw datasets files.
+    ├── Part1.ipynb                          : Answers and explanations for Question block 1.
+    ├── Part2.ipynb                          : Answers and explanations for Question block 2.
+    ├── Part3.ipynb                          : Answers and explanations for Question block 3.
+    |
+    ├── datasets
+    │   ├── pickle_files                     : Directory containing files of raw datasets, with pickle format & reduced in size.
+    │   ├── processed\_pickle_files          : Directory containing processed (reduced & filtered) datasets.
+    │   ├── raw_files                        : Directory containing raw datasets files (h5, csv, txt formats).
+    │
+    ├── maps                                 : Directory containing maps for certain results in html format.
+    |
+    ├── mock-scripts                         : Directory containing initial scripts for preliminary analysis & data scrapping.
+    │
+    ├── pictures                             : Directory containing images for certain results.
+    │
+    ├── report                               : Directory containing templates for final report.
+    │
+    ├── scripts                              : Directory containing helpers script for our main.ipynb notebook.
+
+--------
+
 # Data Aqusition & Initial Data Preprocessing
 The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets is spreaded in A-Z directories and contains additional datasets (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as pickle files. We choose to use pickle format to boost loading time for later load the data in notebook.
 
@@ -129,9 +158,6 @@ This represents the profiles of real users in which we can find for every profil
 |Week 5<br>**28.11.2017 - 05.12.2017**|<ul><li>Final check with our results.</li><li> Decide the way to present our work(report or data story).</li></ul>|
 |Week 6<br>**05.12.2017 - 12.12.2017**|<ul><li>Work on report/data story.</li><li> Improve the organization of notebook and improve the space/time efficiency.</li></ul>|
 |Week 7<br>**12.12.2017 - 19.12.2017**|<ul><li>Finalize report/data story and notebook.</li></ur>|
-
-# Questions for TAs
-Add here some questions you have for us, in general or project-specific.
 
 # Citation for the Dataset
 - SecondHandSongs dataset, the official list of cover songs within the Million Song Dataset, 
