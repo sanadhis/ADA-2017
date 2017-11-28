@@ -121,19 +121,22 @@ We want to see what are most frequent words popular songs.
 ### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
 Quality of lyrics in literacy point of view can be observed by measuring the occurences of "slang words".
 #### Design of experiment:
+* Load list of bad/slang words (obtained from google).
+* Count the average ratio of bad/slang words in popular and unpopular songs.
+* Observe and comment.
+* Justify the result by comparing words density of popular and unpopular songs.
+
 
 # Dataset
-1. [The SecondHandSongs Dataset](https://labrosa.ee.columbia.edu/millionsong/secondhand) :
-
-FORMAT:
-      
-      Single .txt file: shs_dataset_train.txt
-      #                    - comment, ignore
-      %a,b,c, title        - beginning of a clique. a,b,c are work IDs (negative if not available)
-      TID<SEP>AID<SEP>perf - track ID from the MSD (plus artist ID and SHS performance)
-It contains a mapping between original songs and cover songs contained in the million songs dataset in the form of cliques. This will mainly help us to answer the second question mentionned above.
+1. [The Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) :
+The main dataset, contains one million songs metadata with each 52 attributes.
+Important fields:
+* `song_hotttnesss`: the popularity of a song measured within 0 - 1.
+* `track_id`: act as primary key for all songs in dataset.
 
 2. [The musiXmatch Dataset](https://labrosa.ee.columbia.edu/millionsong/musixmatch) :
+
+Contains the lyrics from a subset of the original dataset songs. For every track in this dataset the lyrics are represented using a bag-of-words format obtained by stemming. This will allow us to address the third research question in particular.
 
 FORMAT:
 
@@ -145,9 +148,8 @@ FORMAT:
             word count is in sparse format -> ...,<word idx>:<cnt>,...
             <word idx> starts at 1 (not zero!)
 
-Which contains the lyrics from a subset of the original dataset songs. For every track in this dataset the lyrics are represented using a bag-of-words format obtained by stemming. This will allow us to address the third research question in particular.
-
 3. [The Last.fm Dataset](https://labrosa.ee.columbia.edu/millionsong/lastfm) :
+For every songs it gives both a list of tags that defines the song (genre, instruments...) and a list of similar songs alongside the value of the similarity measure that was used. The dataset will come in quiet handy when checking for plagiarism or high ressemblance.
 
 FORMAT:
 
@@ -159,9 +161,8 @@ FORMAT:
       'timestamps' - date
       'similar'    - similarity measure of songs, range from 0 to 1 
       
-For every songs it gives both a list of tags that defines the song (genre, instruments...) and a list of similar songs alongside the value of the similarity measure that was used. The dataset will come in quiet handy when checking for plagiarism or high ressemblance.
-
 4. [The Echo Nest Taste Profile Subset](https://labrosa.ee.columbia.edu/millionsong/tasteprofile) :
+This represents the profiles of real users in which we can find for every profile the play count for some song in the original dataset. It covers about a third of the tracks available in the million songs dataset and will give us a good representation of the musical trend.
 
 FORMAT:
 
@@ -169,8 +170,6 @@ FORMAT:
       user   - ID of users
       song   - the song they listen
       count  - how many times the user listens to this song
-      
-This represents the profiles of real users in which we can find for every profile the play count for some song in the original dataset. It covers about a third of the tracks available in the million songs dataset and will give us a good representation of the musical trend.
 
 # A list of internal milestones up until milestone 3
 |Week #|Targets|
