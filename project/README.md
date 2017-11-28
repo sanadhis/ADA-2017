@@ -14,7 +14,6 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 # Project Structure
 ------------
 
-├── project
     ├── main.ipynb                           : The main notebook for the our songs project, answering research questions.
     ├── README.md                            : The README guideline and explanation for our work.
     ├── 00raw_datasets_observation.ipynb     : Notebook contains initial observation for Million Songs datasets.
