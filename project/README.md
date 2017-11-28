@@ -24,7 +24,7 @@ The project's main goal is to prove how society reacts to songs' quality over ti
     |
     ├── datasets
     │   ├── pickle_files                     : Directory containing files of raw datasets, with pickle format & reduced in size.
-    │   ├── processed\_pickle_files          : Directory containing processed (reduced & filtered) datasets.
+    │   ├── processed_pickle_files          : Directory containing processed (reduced & filtered) datasets.
     │   ├── raw_files                        : Directory containing raw datasets files (h5, csv, txt formats).
     │
     ├── maps                                 : Directory containing maps for certain results in html format.
