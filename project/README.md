@@ -52,8 +52,7 @@ In this problem, we also focus on popular singers. We want to see whether the fi
 * Visualize to show the correlation
 * Observation & Comment 
 
-## Question Block 3: What does popular songs contain
-
+## Question Block 3: Quality of popular songs
 ### Q3.1 Do people care more about lyrics?
 #### Design of experiment:
 
