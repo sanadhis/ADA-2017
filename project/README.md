@@ -12,8 +12,38 @@ Through this project, we would like to show how people tend to listen to songs, 
 The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music industry towards time.
 
 # Research questions
+Our question is decomposed into 3 blocks of questions:
+### Q1
+#### Q1.1 What is the characteristic/metrics of popular songs?
+#### design of experiment:
+
+#### Q1.2 What are the challenges that music industry faces?
+#### design of experiment:
+
+#### Q1.3 Can we analyze and predict the trend in music industry from years to years?
+ 
+### Q2
+#### Q2.1 Does the herding bias for hearing songs really happen in our society?
+#### design of experiment:
+
+#### Q2.2 Do people tend to listen to famous singers rather than the songs themselves?¶
+#### design of experiment:
+
+#### Q2.3 Whether the first song of the singer matters for his/her career
+#### design of experiment:
+
+### Q3
+
+#### Q3.1 Do people care more about lyrics?
+#### design of experiment:
+
+#### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
+#### design of experiment:
+
+
+
 Throughout this project, we want to address the following questions:
-- What is the characteristic/metrics of popular songs? What are the challenges that music industry faces? Can we analyze and predict the trend in music industry from years to years?
+-  What are the challenges that music industry faces? Can we analyze and predict the trend in music industry from years to years?
 - Does the herding bias for hearing songs really happen in our society? Do people tend to listen to famous singers rather than the songs themselves? Can we say that the career path for singers began by covering songs which come originally from famous artists?
 - Do people care more about lyrics? Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
 - Can we find plagiarisms in music industry? How often people mimick popular songs? Can we find more similliarities from popular songs compared to unpopular ones? What kind of similiarities?
