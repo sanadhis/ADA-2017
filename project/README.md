@@ -52,7 +52,7 @@ Songs popularity is defined as "song_hotttnesss" and we want to figure out what 
 * Show confusion matrix.
 * Observe and conclude what are significant attributes/features of popular songs.
 
-### Q1.2 What are the challenges that music industry faces?
+### Q1.2 How to distinguish popular and unpopular songs?
 Are we comparing data with same distribution of features? If no, we want to emphasize once again, the attributes of popular songs by performing exploratory data analysis.
 #### Design of experiment:
 * Load the dataset into dataframe & sampling into popular and unpopular songs data.
@@ -124,14 +124,11 @@ The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format
 
 **Note that the datasets' pickle files are relatively big in term of size, thus we do not include them in our repository.**
 
-# Issue with Dataset
-* For our main datasets, which is "msd_songs", almost ~50% songs do not have "songs\_hotttnesss". This makes us utilize only ~50% of datasets (at maximum).
-
 # Dataset
 1. [The Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) :
-The main dataset, contains one million songs metadata with each 52 attributes.
+The main dataset, contains one million songs metadata with each song has 52 attributes.
 Important fields:
-* `song_hotttnesss`: the popularity of a song measured within 0 - 1.
+* `song_hotttnesss`: the popularity of a song measured with value of between 0 - 1.
 * `track_id`: act as primary key for all songs in dataset.
 
 2. [The musiXmatch Dataset](https://labrosa.ee.columbia.edu/millionsong/musixmatch) :
@@ -171,6 +168,9 @@ FORMAT:
       song   - the song they listen
       count  - how many times the user listens to this song
 
+# Issue with Dataset
+* For our main datasets, which is "msd_songs", almost ~50% songs do not have "songs\_hotttnesss". This makes us utilize only ~50% of datasets (at maximum).
+
 # A list of internal milestones up until milestone 3
 |Week #|Targets|
 |---|---|
@@ -178,9 +178,9 @@ FORMAT:
 |Week 2<br>**07.11.2017 - 14.11.2017**|<ul><li>Begin to address research questions.</li><li> Initial analysis of data, finding correlations.</li></ul>|
 |Week 3<br>**14.11.2017 - 21.11.2017**|<ul><li>Initial mockup for python scripts and notebooks.</li><li> Visualize data in several ways: charts, maps, images, and so on.</li></ul>|
 |Week 4<br>**21.11.2017 - 28.11.2017**|<ul><li>Analyze the temporary results.</li><li> Review works and ensure completion for milestone 2.</li></ul>|
-|Week 5<br>**28.11.2017 - 05.12.2017**|<ul><li>Final check with our results.</li><li> Decide the way to present our work(report or data story).</li></ul>|
-|Week 6<br>**05.12.2017 - 12.12.2017**|<ul><li>Work on report/data story.</li><li> Improve the organization of notebook and improve the space/time efficiency.</li></ul>|
-|Week 7<br>**12.12.2017 - 19.12.2017**|<ul><li>Finalize report/data story and notebook.</li></ur>|
+|Week 5<br>**28.11.2017 - 05.12.2017**|<ul><li>Final check with our results.</li><li> Initialize our data story.</li></ul>|
+|Week 6<br>**05.12.2017 - 12.12.2017**|<ul><li>Work on data story.</li><li> Improve the organization of notebook and improve the space/time efficiency.</li></ul>|
+|Week 7<br>**12.12.2017 - 19.12.2017**|<ul><li>Finalize the data story and notebook.</li></ur>|
 
 # Citation for the Dataset
 - SecondHandSongs dataset, the official list of cover songs within the Million Song Dataset, 
