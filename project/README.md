@@ -14,31 +14,39 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 # Research questions
 Our question is decomposed into 3 blocks of questions:
 ### Q1
-#### Q1.1 What is the characteristic/metrics of popular songs?
-#### design of experiment:
+### Q1.1 What is the characteristic/metrics of popular songs?
 
-#### Q1.2 What are the challenges that music industry faces?
-#### design of experiment:
+#### Design of experiment:
+
+### Q1.2 What are the challenges that music industry faces?
+#### Design of experiment:
 
 #### Q1.3 Can we analyze and predict the trend in music industry from years to years?
  
-### Q2
-#### Q2.1 Does the herding bias for hearing songs really happen in our society?
-#### design of experiment:
+## Q2
+### Q2.1 Does the herding bias for hearing songs really happen in our society?
+Herding bias means somebody would listen to several songs sung by specific singers. When we have a postive impression on the first song we hear from this singer, it's possible that we want to listen to other songs from this singer. And usually it's more likely we would love other songs from him/her, no matter whether he/she is famous.
+#### Design of experiment
 
-#### Q2.2 Do people tend to listen to famous singers rather than the songs themselves?¶
-#### design of experiment:
+### Q2.2 Do people tend to listen to famous singers rather than the songs themselves?
+#### Design of experiment
+* Load the dataset into dataframe & sampling
+* Quick observation of the dataset
+* Map Song_ID to the singer names and observe whether there're songs from the same singer
+* Define a way to measure the level of herding bias of the user
+* Visualize the level of herding bias
+* Observation & Comment
 
-#### Q2.3 Whether the first song of the singer matters for his/her career
-#### design of experiment:
+### Q2.3 Whether the first song of the singer matters for his/her career
+#### Design of experiment:
 
-### Q3
+## Q3
 
-#### Q3.1 Do people care more about lyrics?
-#### design of experiment:
+### Q3.1 Do people care more about lyrics?
+#### Design of experiment:
 
-#### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
-#### design of experiment:
+### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
+#### Design of experiment:
 
 
 
