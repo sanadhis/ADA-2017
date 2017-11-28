@@ -54,13 +54,29 @@ Our questions are decomposed into 3 blocks of questions:
 ## Question Block 1: What could make songs popular
 
 ### Q1.1 What is the characteristic/metrics of popular songs?
+Songs popularity is defined as "song_hotttnesss" and we want to figure out what attributes of a song that affect song's popularity most.
 #### Design of experiment:
+* Load the dataset into dataframe & sampling into popular and unpopular songs data.
+* Data splitting, training and fitting with RandomForestClassifier
+* Show confusion matrix.
+* Observe and conclude what are significant attributes/features of popular songs.
 
 ### Q1.2 What are the challenges that music industry faces?
+Are we comparing data with same distribution of features? If no, we want to emphasize once again, the attributes of popular songs by performing exploratory data analysis.
 #### Design of experiment:
+* Load the dataset into dataframe & sampling into popular and unpopular songs data.
+* Compare and observe the discrete features of popular and unpopular songs.
+* Draw map to portray songs distribution accross the world.
+* Compare and observe the continuous features of popular and unpopular songs.
+* Comment and conclude the exploratory data analysis.
 
-### Q1.3 Can we analyze and predict the trend in music industry from years to years?
+### Q1.3 Can we see the trend in music industry from years to years?
+We carefully look into popular genre of popular songs.
 #### Design of experiment:
+* Load the dataset into dataframe & sampling into popular songs data only.
+* Perform join of dataset (sampled msd with msd\_artist_term)
+* Plot the top 10 popular genres from 2001 until 2010.
+* Observe and comment.
 
 ## Question Block 2: What could make singers popular
 
@@ -93,9 +109,17 @@ In this problem, we also focus on popular singers. We want to see whether the fi
 
 ## Question Block 3: Quality of popular songs
 ### Q3.1 Do people care more about lyrics?
+We want to see what are most frequent words popular songs.
 #### Design of experiment:
+* Load the datasets into dataframes.
+* Remove stopwords from mxm_lyrics dataset.
+* Merge msd\_data with mxm_lyrics
+* Plot the overall most frequent words regardless of songs popularity.
+* Plot the overall most frequent words across popular songs.
+* Plot the overall most frequent words across unpopular songs.
 
 ### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
+Quality of lyrics in literacy point of view can be observed by measuring the occurences of "slang words".
 #### Design of experiment:
 
 # Dataset
