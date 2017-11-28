@@ -12,8 +12,8 @@ Through this project, we would like to show how people tend to listen to songs, 
 The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music industry towards time.
 
 # Research questions
-Our question is decomposed into 3 blocks of questions:
-## Question Block 1
+Our questions are decomposed into 3 blocks of questions:
+## Question Block 1: What could make songs popular
 
 ### Q1.1 What is the characteristic/metrics of popular songs?
 
@@ -24,7 +24,7 @@ Our question is decomposed into 3 blocks of questions:
 
 #### Q1.3 Can we analyze and predict the trend in music industry from years to years?
  
-## Question Block 2
+## Question Block 2: What could make singers popular
 ### Q2.1 Does the herding bias for hearing songs really happen in our society?
 Herding bias means somebody would listen to several songs sung by specific singers. When we have a postive impression on the first song we hear from this singer, it's possible that we want to listen to other songs from this singer. And usually it's more likely we would love other songs from him/her, no matter whether he/she is famous.
 #### Design of experiment
@@ -52,7 +52,7 @@ In this problem, we also focus on popular singers. We want to see whether the fi
 * Visualize to show the correlation
 * Observation & Comment 
 
-## Question Block 3
+## Question Block 3: What does popular songs contain
 
 ### Q3.1 Do people care more about lyrics?
 #### Design of experiment:
