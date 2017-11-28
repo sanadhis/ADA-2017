@@ -12,11 +12,12 @@ Through this project, we would like to show how people tend to listen to songs, 
 The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music industry towards time.
 
 # Data Aqusition & Initial Data Preprocessing
-The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets is spreaded in A-Z directories and contains additional dataset (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as pickle files. We choose to use pickle format to boost loading time of our dataset file.
+The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets is spreaded in A-Z directories and contains additional datasets (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as pickle files. We choose to use pickle format to boost loading time for later load the data in notebook.
 
 > Check our notebook for [initial processing of raw files](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_preprocessings.ipynb) and [datasets brief description](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_observation.ipynb) to have more clear insight for our initial data preprocessing methods.
 
-For our main datasets, "msd_songs", we filter one million song entries without hotttnesss and get about five hundred thousands songs (reduced almost half). The rest of processing are adjusted with each of our questions' need.
+For our main datasets, "msd_songs", we filter one million song entries by removing songs without hotttnesss and then get about five hundred thousands songs (reduced almost half). The rest of processing are adjusted with each of our questions' need.
+
 **Note that the datasets' pickle files are relatively big in term of size, thus we do not include it in our repository**
 
 # Research questions
