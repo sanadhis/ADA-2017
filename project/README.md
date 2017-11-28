@@ -13,7 +13,8 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 
 # Research questions
 Our question is decomposed into 3 blocks of questions:
-### Q1
+## Question Block 1
+
 ### Q1.1 What is the characteristic/metrics of popular songs?
 
 #### Design of experiment:
@@ -23,7 +24,7 @@ Our question is decomposed into 3 blocks of questions:
 
 #### Q1.3 Can we analyze and predict the trend in music industry from years to years?
  
-## Q2
+## Question Block 2
 ### Q2.1 Does the herding bias for hearing songs really happen in our society?
 Herding bias means somebody would listen to several songs sung by specific singers. When we have a postive impression on the first song we hear from this singer, it's possible that we want to listen to other songs from this singer. And usually it's more likely we would love other songs from him/her, no matter whether he/she is famous.
 #### Design of experiment
@@ -40,7 +41,7 @@ Herding bias means somebody would listen to several songs sung by specific singe
 ### Q2.3 Whether the first song of the singer matters for his/her career
 #### Design of experiment:
 
-## Q3
+## Question Block 3
 
 ### Q3.1 Do people care more about lyrics?
 #### Design of experiment:
