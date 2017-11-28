@@ -3,13 +3,21 @@
 > Project of Applied Data Analysis Course - 2017/2018
 
 # Abstract
-This project aims to analyze the trends towards songs' popularity from years to years. We want to define metrics that can lead to prediction of songs' popularity in billboard. To achive this, we use [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) that has collection of audio features and metadata of popular songs. 
+This project aims to analyze the trends towards songs' popularity from years to years. We want to define metrics that can lead to prediction of songs' popularity in billboard. To achive this, we use [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) that has collection of audio features and metadata of popular songs.
 
-Through this project, we would like to show how people tend to listen to songs, e.g. by considering the singers/artist, genres, lyrics. Then we want to use our findings to measure how newcomers in music industry become popular.
+Through this project, we would like to show how people tend to listen to songs, e.g. by considering the singers/artist, genres, lyrics. Then we also want to know whether herding bias happens, i.e. somebody listening songs from same artist, and the quality of popular songs by considering the lyrics (frequent words, slang words).
 
 > Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything. _-Plato_
 
 The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music industry towards time.
+
+# Data Aqusition & Initial Data Preprocessing
+The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets is spreaded in A-Z directories and contains additional dataset (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as pickle files. We choose to use pickle format to boost loading time of our dataset file.
+
+> Check our notebook for [initial processing of raw files](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_preprocessings.ipynb) and [datasets brief description](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_observation.ipynb) to have more clear insight for our initial data preprocessing methods.
+
+For our main datasets, "msd_songs", we filter one million song entries without hotttnesss and get about five hundred thousands songs (reduced almost half). The rest of processing are adjusted with each of our questions' need.
+**Note that the datasets' pickle files are relatively big in term of size, thus we do not include it in our repository**
 
 # Research questions
 Our questions are decomposed into 3 blocks of questions:
