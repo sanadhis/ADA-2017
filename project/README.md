@@ -3,13 +3,13 @@
 > Project of Applied Data Analysis Course - 2017/2018
 
 # Abstract
-This project aims to analyze the trends towards songs' popularity from years to years. We want to define metrics that can lead to prediction of songs' popularity in billboard. To achive this, we use [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) that has collection of audio features and metadata of popular songs.
-
-Through this project, we would like to show how people tend to listen to songs, e.g. by considering the singers/artist, genres, lyrics. Then we also want to know whether herding bias happens, i.e. somebody listening songs from same artist, and the quality of popular songs by considering the lyrics (frequent words, slang words).
-
 > Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything. _-Plato_
 
-The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music industry towards time.
+This project aims to analyze the trends towards songs' popularity in recent years. We want to define metrics that can lead to prediction of songs' popularity in billboard. To achive this, we use [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) that has collection of audio features and metadata of popular songs.
+
+Through this project, we would like to show how people tend to listen to songs, e.g. by considering the singers/artist, genres, lyrics. Then we also want to know whether herding bias happens, i.e. somebody listening songs from same artist, and we eager to observe frequent words and occurences of impolite words (slang words) across popular songs' lyrics.
+
+The project's main goal is to prove how society reacts to songs' quality over time. We expect to see the challenges of music popularity towards time.
 
 # Project Structure
 ------------
