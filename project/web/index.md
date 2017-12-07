@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% include styles.html %}
+{% include scripts.html %}
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
