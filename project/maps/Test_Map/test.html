@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.background {
+  fill: black;
+  pointer-events: all;
+}
+
+.feature {
+  fill: #ccc;
+  cursor: pointer;
+  opacity: .7;
+}
+
+.feature.active {
+  fill: #ccc;
+}
+
+.mesh {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+</style>
+<body>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script>
+
+var width = window.screen.availWidth/1.01,
+    height = window.screen.availHeight/1.12,
+    active = d3.select(null);
+
+var projection = d3.geo.mercator()
+    .scale(1000)
+    .translate([width / 2, height / 2]);
+
+var zoom = d3.behavior.zoom()
+    .translate([387, 322])
+    .scale(.25)
+    .scaleExtent([.25, 100])
+    .on("zoom", zoomed);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var first = true;
+
+var name = "";
+
+var marks = [];
+
+var tooltip = d3.select("body")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("visibility", "hidden")
+      .style("font-size","xx-large");
+
+
+d3.csv("latLongMax.csv", function(data) {
+  data.forEach(function(d) {
+    marks.push({long: d.longitude, lat: d.latitude, country_txt: d.country_txt, gname: d.gname, count: d.count})
+  });
+});
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", stopped, true);
+
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", reset);
+
+var g = svg.append("g");
+
+svg
+    .call(zoom) // delete this line to disable free zooming
+    .call(zoom.event);
+
+var country = {};
+d3.csv("countryCount.csv", function(data) {
+    data.forEach(function(d) {
+      country[d.country_txt] = d.eventid;
+  });
+});
+
+//Scale color
+var body = d3.select("body"),
+    length = 22130, //Max Iraq
+    color = d3.scale.linear().domain([1,length/3])
+      .interpolate(d3.interpolateHcl)
+      .range([d3.rgb("#427eff"),d3.rgb('#F90000')]);
+
+
+d3.json("world-countries.json", function(error, us) {
+  if (error) throw error;
+
+  g.selectAll("path")
+      .data(topojson.feature(us, us.objects.countries1).features)
+    .enter().append("path")
+      .attr("d", path)
+      .attr("class", "feature")
+      .on("click", clicked)
+      .style("fill",function(d){if (typeof country[d.properties.name] == 'undefined') {return '#ccc';}
+        return color(Math.min(country[d.properties.name],length/3))});
+
+  g.append("path")
+      .datum(topojson.mesh(us, us.objects.countries1, function(a, b) {return a !== b; }))
+      .attr("class", "mesh")
+      .attr("d", path);
+});
+
+function resetColor(d) {
+  g.selectAll("path").filter(function(d) {
+    if (d.type == "Feature") {
+      return d.properties.name == name;
+    }
+    return false;}).style("fill",function(d){if (typeof country[d.properties.name] == 'undefined') {return '#ccc';}
+      return color(Math.min(country[d.properties.name],length/3))});
+}
+
+function clicked(d) {
+  g.selectAll("circle").remove();
+  tooltip.style("visibility", "hidden");
+  resetColor(d);
+  if (active.node() === this) return reset(d);
+  active.classed("active", false);
+  active = d3.select(this).classed("active", true);
+
+  var bounds = path.bounds(d),
+      dx = bounds[1][0] - bounds[0][0],
+      dy = bounds[1][1] - bounds[0][1],
+      x = (bounds[0][0] + bounds[1][0]) / 2,
+      y = (bounds[0][1] + bounds[1][1]) / 2,
+      scale = Math.max(.25, Math.min(100, 0.9 / Math.max(dx / width, dy / height))),
+      translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+  name = d.properties.name;
+  g.selectAll("path").filter(function(d) {
+    if (d.type == "Feature") {
+      return d.properties.name == name;
+    }
+    return false;}).style("fill","#ccc");
+
+  markers(name);
+
+  svg.transition()
+      .duration(750)
+      .call(zoom.translate(translate).scale(scale).event);
+
+  tooltip.text(name+" : "+country[name]+" events");
+  tooltip.style("visibility", "visible");
+  tooltip.style("color", "white");
+}
+
+function reset(d) {
+  active.classed("active", false);
+  active = d3.select(null);
+
+  g.selectAll("circle").remove();
+  svg.transition()
+      .duration(750)
+      .call(zoom.translate([387, 322]).scale(.25).event);
+
+  resetColor(d);
+
+  tooltip.style("visibility", "hidden");
+}
+
+function zoomed() {
+  g.style("stroke-width", 1.5 / d3.event.scale + "px");
+  g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
+
+function hashCode(str) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+       hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return hash;
+}
+
+function intToRGB(i){
+    var c = (i & 0x00FFFFFF)
+        .toString(16)
+        .toUpperCase();
+
+    return "00000".substring(0, 6 - c.length) + c;
+}
+
+function markers(name) {
+
+  var tooltip = d3.select("body")
+	  .append("div")
+	  .style("position", "absolute")
+	  .style("z-index", "10")
+	  .style("visibility", "hidden")
+    .style("color","white");
+
+
+  g.selectAll(".mark")
+    .data(marks.filter(function(d) { return d.country_txt == name; }))
+    .enter()
+    .append("circle")
+    .attr("r", function(d){return Math.log(d.count+1)/2;})
+    .style("fill", function(d) { return "none"; })
+    .style("stroke", function(d) { return intToRGB(hashCode(d.gname)); })
+    .attr("transform", function(d) {
+      pro = projection([d.long,d.lat])
+      pro[0] = pro[0];
+      pro[1] = pro[1];
+      return "translate(" + pro + ")";})
+    .on("mouseover", function(d){tooltip.text([d.count]+" by "+d.gname);
+      return tooltip.style("visibility", "visible");})
+	  .on("mousemove", function(d){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");})
+	  .on("mouseout", function(d){return tooltip.style("visibility", "hidden");});
+}
+
+// If the drag behavior prevents the default click,
+// also stop propagation so we don’t click-to-zoom.
+function stopped() {
+  if (d3.event.defaultPrevented) d3.event.stopPropagation();
+}
+
+
+
+</script>
