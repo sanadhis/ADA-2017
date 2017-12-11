@@ -15,7 +15,29 @@ Morbi magna diam, finibus venenatis eros vitae, ultrices convallis elit. Pellent
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
 
-Morbi magna diam, finibus venenatis eros vitae, ultrices convallis elit. Pellentesque at faucibus dui. Vivamus bibendum placerat eros, sed cursus nisl placerat a. Maecenas maximus venenatis purus vel vestibulum. Nullam dapibus elit arcu, id commodo turpis tincidunt vitae. Ut scelerisque felis a mi interdum tempor. Vivamus ac leo semper, rhoncus dolor a, mattis lorem. Cras non tellus iaculis, rhoncus dui at, gravida augue. Cras mattis erat nec pellentesque sollicitudin. Phasellus id augue magna.
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+
+<table align="center" style="text-align: center;">
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$80</td>
+  </tr>
+</table>
+
 * * *
 
 <h2 style="text-align: center;"> Observing Songs' Popularity </h2>
