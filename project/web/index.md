@@ -9,7 +9,8 @@ layout: default
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
 
-{% include_relative _includes/chart_graph.html %}
+<div id="pieChart"></div>
+{% include_relative _includes/c3_chart_pie.html %}
 
 Morbi magna diam, finibus venenatis eros vitae, ultrices convallis elit. Pellentesque at faucibus dui. Vivamus bibendum placerat eros, sed cursus nisl placerat a. Maecenas maximus venenatis purus vel vestibulum. Nullam dapibus elit arcu, id commodo turpis tincidunt vitae. Ut scelerisque felis a mi interdum tempor. Vivamus ac leo semper, rhoncus dolor a, mattis lorem. Cras non tellus iaculis, rhoncus dui at, gravida augue. Cras mattis erat nec pellentesque sollicitudin. Phasellus id augue magna.
 
@@ -47,7 +48,10 @@ var fun = function lang(l) {
 ### Characteristics
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
 
-<!-- {% include_relative _includes/chart_bar.html %} -->
+<div id="drop" align="center"></div>
+<svg width="960" height="500" id="barChart"></svg>
+
+{% include_relative _includes/d3_chart_bar.html %}
 
 ### Genres over time
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
@@ -63,6 +67,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa
 
 ### Do people care about Lyrics?
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
+
+<div id="chart"></div>
+{% include_relative _includes/c3_chart_line.html %}
 
 ### Presence of "Slank Words" in Popular Songs
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.

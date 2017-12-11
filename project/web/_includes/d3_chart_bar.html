@@ -1,44 +1,18 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<head>
-<style>
-
-.rectangle {
-	fill: steelblue;
-}
-.rectangle:hover {
-	fill: orange;
-}
-.axis {
-  font: 10px sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-</style>
-</head>
-<body>
-<div id="drop" align=center></div>
-<script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
 var margin = {top: 80, right: 180, bottom: 80, left: 180},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#barChart").append("svg")
 	.attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
 	.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 //replace by csv if you want
-d3.tsv("test.tsv", function(error, data){
-
+d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data){
+    
 	var data = data
 	// Get every column value
 	var elements = Object.keys(data[0])
@@ -152,4 +126,3 @@ d3.tsv("test.tsv", function(error, data){
 });
 
 </script>
-</body>
