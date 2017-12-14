@@ -190,6 +190,7 @@ FORMAT:
 
 # Issue with Dataset
 * For our main datasets, which is "msd_songs", almost ~50% songs do not have "songs\_hotttnesss". This makes us utilize only ~50% of datasets (at maximum).
+* In dataset "msd_songs", the feature "genre" is empty.
 
 # A list of internal milestones up until milestone 3
 |Week #|Targets|
