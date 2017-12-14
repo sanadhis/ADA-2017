@@ -42,6 +42,15 @@ The project's main goal is to prove how society reacts to songs' quality over ti
 
 --------
 
+# Dependencies 
+In order to reuse our work, there are two dependencies aside from [Conda with Python 3.6](https://www.anaconda.com/download/).
+1. Pylast
+[Pylast](https://github.com/pylast/pylast) is a Python interface to Last.fm API. To install via pip:
+    pip install pylast
+2. Folium
+[Folium](http://python-visualization.github.io/folium/docs-master/) is awesome library to draw maps in Python. To install via pip:
+    pip install folium
+
 # Research questions
 Our questions are decomposed into 3 blocks of questions:
 ## Question Block 1: What could make songs popular
@@ -119,7 +128,7 @@ Quality of lyrics in literacy point of view can be observed by measuring the occ
 * Observe and comment.
 * Justify the result by comparing words density of popular and unpopular songs.
 
-# Data Aqusition & Initial Data Preprocessing
+# Data Acqusition & Initial Data Preprocessing
 The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets are spreaded in A-Z directories and come along with additional datasets (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as 12 pickle files. We decide to use pickle format to boost loading time for later data loading process in notebook.
 
 > Check our notebook for [initial processing of raw files](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_preprocessings.ipynb) and [datasets brief description](https://github.com/sanadhis/ITT-ADA-2017/blob/master/project/00raw_datasets_observation.ipynb) to have more clear insight for our initial data preprocessing methods.
