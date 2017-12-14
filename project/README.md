@@ -38,6 +38,11 @@ The project's main goal is to prove how society reacts to songs' quality over ti
     ├── report                               : Directory containing templates for final report.
     │
     ├── scripts                              : Directory containing helper scripts for our main.ipynb notebook.
+    │
+    ├── web                                  : Directory containing static web files for data story.
+    │   ├── _includes                        : Directory containing custom CSS and JS scripts.
+    │   ├── _posts                           : (Not used) Directory containing Jekyll-styled posts.
+    │   ├── data                             : Directory containing static data files for charts and plots in either c3.js or d3.js.
 
 
 --------
@@ -204,7 +209,12 @@ available at: http://labrosa.ee.columbia.edu/millionsong/secondhand
 The Million Song Dataset. In Proceedings of the 12th International Society
 for Music Information Retrieval Conference (ISMIR 2011), 2011.
 
-## Team - ITT
+## Contributors
+- Cheng-Chun Lee   : Problems formulation, flow analysis, analyzing data, answering block 2 & block 4 of research questions, running test, documenting notebook.
+- Sanadhi Sutandi  : Crawling data, handling initial cluster operation (spark), initial processing of raw datasets, answering block 1 of research questions, documenting notebook, coding and setting overall data story.
+- Skander Hajri    : Preliminary data analysis, answering block 3 of research questions, visualizing the data (plots, charts, maps), writing the content for datastory.
+
+## Contacts
 [Project Repository Page](https://github.com/sanadhis/ITT-ADA-2017/tree/master/project)
 - Cheng-Chun Lee ([@wlo2398219](https://github.com/wlo2398219)) : (cheng-chun.lee@epfl.ch)
 - Sanadhi Sutandi ([@sanadhis](https://github.com/sanadhis)) : (i.sutandi@epfl.ch)
