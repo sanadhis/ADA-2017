@@ -20,9 +20,9 @@ The project's main goal is to prove how society reacts to songs' quality over ti
     ├── README.md                            : The README guideline and explanation for our work.
     ├── 00raw_datasets_observation.ipynb     : Notebook contains initial observation for Million Songs datasets.
     ├── 00raw_datasets_preprocessings.ipynb  : Notebook contains initial preprocessing for raw datasets files.
-    ├── Part1.ipynb                          : (Specific) Answers and explanations for Question block 1.
-    ├── Part2.ipynb                          : (Specific) Answers and explanations for Question block 2.
-    ├── Part3.ipynb                          : (Specific) Answers and explanations for Question block 3.
+    ├── Part1.ipynb                          : (Specific & Not Updated) Answers and explanations for Question block 1.
+    ├── Part2.ipynb                          : (Specific & Not Updated) Answers and explanations for Question block 2.
+    ├── Part3.ipynb                          : (Specific & Not Updated) Answers and explanations for Question block 3.
     |
     ├── datasets
     │   ├── pickle_files                     : Directory containing files of raw datasets, with pickle format & reduced in size.
