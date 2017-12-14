@@ -137,6 +137,15 @@ Quality of lyrics in literacy point of view can be observed by measuring the occ
 * Observe and comment.
 * Justify the result by comparing words density of popular and unpopular songs.
 
+## Q4 Bonus - User Behavior Analysis
+Reveal the behavior of the user
+#### Design of experiment:
+* Show the user his/her playcount distribution
+* Show the user's favorite singer
+* Show the herding bias of this user
+* Show the genres this user listens to
+* Recommend the songs similar to what he/she listened before
+
 # Data Acqusition & Initial Data Preprocessing
 The raw datasets provided by ADA TAs are 280 GB in size and have h5 (HDF) format. The datasets are spreaded in A-Z directories and come along with additional datasets (/AdditionalFiles). From all provided dataset files, we utilize 12 different datasets and store them as 12 pickle files. We decide to use pickle format to boost loading time for later data loading process in notebook.
 
