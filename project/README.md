@@ -138,7 +138,7 @@ Quality of lyrics in literacy point of view can be observed by measuring the occ
 * Justify the result by comparing words density of popular and unpopular songs.
 
 ## Q4 Bonus - User Behavior Analysis
-Reveal the behavior of the user
+This part is the additional part we added after milestone II. The objective is to reveal the behavior of the user
 #### Design of experiment:
 * Show the user his/her playcount distribution
 * Show the user's favorite singer
