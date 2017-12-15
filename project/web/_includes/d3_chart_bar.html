@@ -1,18 +1,7 @@
 <script>
-
-var margin = {top: 80, right: 180, bottom: 80, left: 180},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
-var svg = d3.select("#barChart").append("svg")
-	.attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-	.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
 //replace by csv if you want
 d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data){
-    
+
 	var data = data
 	// Get every column value
 	var elements = Object.keys(data[0])
@@ -21,94 +10,58 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
 			return (d != "word");
 		});
 	var selection = elements[0];
-  console.log(elements);
-	var y = d3.scale.linear()
-			.domain([0, d3.max(data, function(d){
-				return +d[selection];
-			})])
-			.range([height, 0]);
 
-  //index column used for X axis
-	var x = d3.scale.ordinal()
-			.domain(data.map(function(d){ return d.word;}))
-			.rangeBands([0, width]);
+  newData = data.map(function(value,index) { return value[selection]; });
+  newData.unshift(selection);
 
-
-	var xAxis = d3.svg.axis()
-		.scale(x)
-	    .orient("bottom");
-
-	var yAxis = d3.svg.axis()
-		.scale(y)
-	    .orient("left");
-
-	svg.append("g")
-    	.attr("class", "x axis")
-    	.attr("transform", "translate(0," + height + ")")
-    	.call(xAxis)
-    	.selectAll("text")
-    	.style("font-size", "10px")
-      	.style("text-anchor", "end")
-      	.attr("dx", "-.8em")
-      	.attr("dy", "-.55em")
-      	.attr("transform", "rotate(-90)" );
-
-
- 	svg.append("g")
-    	.attr("class", "y axis")
-    	.call(yAxis);
-
-	svg.selectAll("rectangle")
-		.data(data)
-		.enter()
-		.append("rect")
-		.attr("class","rectangle")
-		.attr("width", width/data.length)
-		.attr("height", function(d){
-			return height - y(+d[selection]);
-		})
-		.attr("x", function(d, i){
-			return (width / data.length) * i ;
-		})
-		.attr("y", function(d){
-			return y(+d[selection]);
-		})
-		.append("title")
-		.text(function(d){
-			return d.word + " : " + d[selection];
-		});
+  var chart = c3.generate({
+    bindto: "#barChart",
+    data: {
+      columns: [
+          newData
+      ],
+      type: 'bar'
+    },
+    bar: {
+      width: {
+        ratio: 0.75 // this makes bar width 75% of length between ticks
+      }
+    },
+    axis: {
+      x: {
+        type:'category',
+        categories: data.map(function(value,index) { return value['word']; })
+      }
+    }
+  });
 
 	var selector = d3.select("#drop")
     	.append("select")
     	.attr("id","dropdown")
     	.on("change", function(d){
         	selection = document.getElementById("dropdown");
-
-        	y.domain([0, d3.max(data, function(d){
-				return +d[selection.value];})]);
-
-        	yAxis.scale(y);
-
-        	d3.selectAll(".rectangle")
-           		.transition()
-	            .attr("height", function(d){
-					return height - y(+d[selection.value]);
-				})
-				.attr("x", function(d, i){
-					return (width / data.length) * i ;
-				})
-				.attr("y", function(d){
-					return y(+d[selection.value]);
-				})
-           		.ease("linear")
-           		.select("title")
-           		.text(function(d){
-           			return d.word + " : " + d[selection.value];
-           		});
-
-           	d3.selectAll("g.y.axis")
-           		.transition()
-           		.call(yAxis);
+          newData = data.map(function(value,index) { return value[selection.value]; });
+          newData.unshift(selection.value);
+          chart = c3.generate({
+            bindto: "#barChart",
+            data: {
+              columns: [
+                  newData
+              ],
+              type: 'bar'
+            },
+            bar: {
+              width: {
+                ratio: .75 // this makes bar width 75% of length between ticks
+              }
+            },
+            axis: {
+              x: {
+                type:'category',
+                categories: data.map(function(value,index) { return value['word']; })
+              }
+            }
+          });
 
          });
 
@@ -121,7 +74,6 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
       .text(function(d){
         return d;
       })
-
 
 });
 

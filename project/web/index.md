@@ -49,7 +49,7 @@ var fun = function lang(l) {
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
 
 <div id="drop" align="center"></div>
-<svg width="960" height="500" id="barChart"></svg>
+<svg width="100%" height="500" id="barChart"></svg>
 
 {% include_relative _includes/d3_chart_bar.html %}
 
