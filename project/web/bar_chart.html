@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<style>
+
+.rectangle {
+	fill: steelblue;
+}
+.rectangle:hover {
+	fill: orange;
+}
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+</style>
+</head>
+<body>
+<div id="drop" align=center></div>
+<div id="chart"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<link href="./c3-0.4.18/c3.css" rel="stylesheet">
+<script src="./c3-0.4.18/c3.min.js"></script>
+
+<script>
+
+var margin = {top: 80, right: 180, bottom: 80, left: 180},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var svg = d3.select("body").append("svg")
+	.attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+	.append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+//replace by csv if you want
+d3.tsv("test.tsv", function(error, data){
+
+	var data = data
+	// Get every column value
+	var elements = Object.keys(data[0])
+		.filter(function(d){
+      //index column removed
+			return (d != "word");
+		});
+	var selection = elements[0];
+
+  newData = data.map(function(value,index) { return value[selection]; });
+  newData.unshift(selection);
+
+  var chart = c3.generate({
+    data: {
+      columns: [
+          newData
+      ],
+      type: 'bar'
+    },
+    bar: {
+      width: {
+        ratio: 0.75 // this makes bar width 75% of length between ticks
+      }
+    },
+    axis: {
+      x: {
+        type:'category',
+        categories: data.map(function(value,index) { return value['word']; })
+      }
+    }
+  });
+
+	var selector = d3.select("#drop")
+    	.append("select")
+    	.attr("id","dropdown")
+    	.on("change", function(d){
+        	selection = document.getElementById("dropdown");
+          newData = data.map(function(value,index) { return value[selection.value]; });
+          newData.unshift(selection.value);
+          chart = c3.generate({
+            data: {
+              columns: [
+                  newData
+              ],
+              type: 'bar'
+            },
+            bar: {
+              width: {
+                ratio: .75 // this makes bar width 75% of length between ticks
+              }
+            },
+            axis: {
+              x: {
+                type:'category',
+                categories: data.map(function(value,index) { return value['word']; })
+              }
+            }
+          });
+
+         });
+
+    selector.selectAll("option")
+      .data(elements)
+      .enter().append("option")
+      .attr("value", function(d){
+        return d;
+      })
+      .text(function(d){
+        return d;
+      })
+
+});
+
+</script>
+</body>
