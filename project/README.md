@@ -221,8 +221,8 @@ for Music Information Retrieval Conference (ISMIR 2011), 2011.
 
 ## Contributors
 - Cheng-Chun Lee   : Problems formulation, flow analysis, analyzing data, answering block 2 & block 4 of research questions, running test, documenting notebook.
-- Sanadhi Sutandi  : Crawling data, handling initial cluster operation (spark), initial processing of raw datasets, answering block 1 of research questions, documenting notebook, coding and setting overall data story.
-- Skander Hajri    : Preliminary data analysis, answering block 3 of research questions, visualizing the data (plots, charts, maps), writing the content for datastory.
+- Sanadhi Sutandi  : Crawling data, handling initial cluster operation (spark), initial processing of raw datasets, answering block 1 of research questions, documenting notebook, coding and setting overall data story, and **deliver the final presentation**.
+- Skander Hajri    : Preliminary data analysis, proposing sentinment analysis, answering block 3 of research questions, visualizing the data (plots, charts, maps), writing the content for datastory.
 
 ## Contacts
 [Project Repository Page](https://github.com/sanadhis/ITT-ADA-2017/tree/master/project)
