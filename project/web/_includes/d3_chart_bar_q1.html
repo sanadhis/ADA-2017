@@ -1,13 +1,13 @@
 <script>
 //replace by csv if you want
-d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data){
+d3.csv("{{ "/project/web/data/q1_terms_by_year.csv" | relative_url }}", function(error, data){
 
 	var data = data
 	// Get every column value
 	var elements = Object.keys(data[0])
 		.filter(function(d){
       //index column removed
-			return (d != "word");
+			return (d != "term");
 		});
 	var selection = elements[0];
 
@@ -15,7 +15,7 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
   newData.unshift(selection);
 
   var chart = c3.generate({
-    bindto: "#barChart",
+    bindto: "#barChartQ1",
     data: {
       columns: [
           newData
@@ -32,12 +32,12 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
     axis: {
       x: {
         type:'category',
-        categories: data.map(function(value,index) { return value['word']; })
+        categories: data.map(function(value,index) { return value['term']; })
       }
     }
   });
 
-	var selector = d3.select("#drop")
+	var selectorQ1 = d3.select("#dropQ1")
     	.append("select")
     	.attr("id","dropdown")
     	.on("change", function(d){
@@ -45,7 +45,7 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
           newData = data.map(function(value,index) { return value[selection.value]; });
           newData.unshift(selection.value);
           chart = c3.generate({
-            bindto: "#barChart",
+            bindto: "#barChartQ1",
             data: {
               columns: [
                   newData
@@ -62,14 +62,14 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
             axis: {
               x: {
                 type:'category',
-                categories: data.map(function(value,index) { return value['word']; })
+                categories: data.map(function(value,index) { return value['term']; })
               }
             }
           });
 
          });
 
-    selector.selectAll("option")
+    selectorQ1.selectAll("option")
       .data(elements)
       .enter().append("option")
       .attr("value", function(d){
