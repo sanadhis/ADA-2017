@@ -20,9 +20,7 @@ d3.csv("{{ "/project/web/data/q1_terms_by_year.csv" | relative_url }}", function
       columns: [
           newData
       ],
-      type: 'bar',
-      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-      onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+      type: 'bar'
     },
     bar: {
       width: {
@@ -39,9 +37,9 @@ d3.csv("{{ "/project/web/data/q1_terms_by_year.csv" | relative_url }}", function
 
 	var selectorQ1 = d3.select("#dropQ1")
     	.append("select")
-    	.attr("id","dropdown")
+    	.attr("id","dropdownq1")
     	.on("change", function(d){
-        	selection = document.getElementById("dropdown");
+        	selection = document.getElementById("dropdownq1");
           newData = data.map(function(value,index) { return value[selection.value]; });
           newData.unshift(selection.value);
           chart = c3.generate({
@@ -50,9 +48,7 @@ d3.csv("{{ "/project/web/data/q1_terms_by_year.csv" | relative_url }}", function
               columns: [
                   newData
               ],
-              type: 'bar',
-              onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-              onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+              type: 'bar'
             },
             bar: {
               width: {

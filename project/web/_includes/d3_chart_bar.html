@@ -1,28 +1,26 @@
 <script>
 //replace by csv if you want
-d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data){
+d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, dataq3){
 
-	var data = data
+	var dataq3 = dataq3
 	// Get every column value
-	var elements = Object.keys(data[0])
+	var elements = Object.keys(dataq3[0])
 		.filter(function(d){
       //index column removed
 			return (d != "word");
 		});
-	var selection = elements[0];
+	var selectionq3 = elements[0];
 
-  newData = data.map(function(value,index) { return value[selection]; });
-  newData.unshift(selection);
+  newDataq3 = dataq3.map(function(value,index) { return value[selectionq3]; });
+  newDataq3.unshift(selectionq3);
 
-  var chart = c3.generate({
+  var chartq3 = c3.generate({
     bindto: "#barChart",
     data: {
       columns: [
-          newData
+          newDataq3
       ],
-      type: 'bar',
-      onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-      onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+      type: 'bar'
     },
     bar: {
       width: {
@@ -32,27 +30,25 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
     axis: {
       x: {
         type:'category',
-        categories: data.map(function(value,index) { return value['word']; })
+        categories: dataq3.map(function(value,index) { return value['word']; })
       }
     }
   });
 
 	var selector = d3.select("#drop")
     	.append("select")
-    	.attr("id","dropdown")
+    	.attr("id","dropdownq3")
     	.on("change", function(d){
-        	selection = document.getElementById("dropdown");
-          newData = data.map(function(value,index) { return value[selection.value]; });
-          newData.unshift(selection.value);
-          chart = c3.generate({
+        	selectionq3 = document.getElementById("dropdownq3");
+          newDataq3 = dataq3.map(function(value,index) { return value[selectionq3.value]; });
+          newDataq3.unshift(selectionq3.value);
+          chartq3 = c3.generate({
             bindto: "#barChart",
             data: {
               columns: [
-                  newData
+                  newDataq3
               ],
-              type: 'bar',
-              onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-              onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+              type: 'bar'
             },
             bar: {
               width: {
@@ -62,7 +58,7 @@ d3.tsv("{{ "/project/web/data/test.tsv" | relative_url }}", function(error, data
             axis: {
               x: {
                 type:'category',
-                categories: data.map(function(value,index) { return value['word']; })
+                categories: dataq3.map(function(value,index) { return value['word']; })
               }
             }
           });
