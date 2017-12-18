@@ -47,6 +47,12 @@
             type:'category',
             categories: data.map(function(value,index) {
               return value['Word1']; })
+          },
+          y: {
+            label: {
+                text: 'Word Occurences',
+                position: 'outer-middle'
+            }
           }
         }
       });
@@ -85,6 +91,12 @@
                       else if(selection.value == 'Full count'){return value['Word3'];}
                       else if(selection.value == 'Top songs count'){return value['Word4'];}
                       return value['Word1']; })
+                  },
+                  y: {
+                    label: {
+                        text: 'Word Occurences',
+                        position: 'outer-middle'
+                    }
                   }
                 }
               });

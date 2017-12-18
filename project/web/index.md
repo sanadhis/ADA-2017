@@ -75,7 +75,7 @@ Popular = <span style="color:blue">Blue</span>, Unpopular = <span style="color:g
 <iframe src="https://sanadhis.github.io/ITT-ADA-2017/project/web/maps/songs_distribution.html" width="100%" height="400">Your browser does not support iframes.</iframe>
 We spot for both popular and unpopular songs, they are mostly coming either from United States (Eastern America) or European Union (England). In general, songs coming from non-english countries are tend to be unpopular. There is a high possibility that audiences around the world prefer to listen for songs in English.
 
-### Genres over time
+### Popular Genres over Time
 Rock songs are favorite music for audiences from 2001-2009.
 
 <div id="dropQ1" align="center"></div>
@@ -132,11 +132,11 @@ Do the songs in the first year matter a lot for artist? Are they key to success 
 The scatter plot tells us artists may need to seize the opportunity in their first year because several recently popular singers make a success during their first year! Let us give 2 classical examples: Psy and Taylor Swift:
 
 <div class="clearfix">
-<img src="img/Psy.jpg" class="img3" width="120px" height="120px">
+<img src="img/Psy.jpg" class="img3" width="180px" height="240px">
  The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
 
 <div class="clearfix">
-<img src="img/Taylor_Swift.jpg" class="img2" width="120px" height="120px">
+<img src="img/Taylor_Swift.jpg" class="img2" width="180px" height="240px">
  The American artist, Taylor Swift, starts her career since 2006. In 2007 and 2008, four single songs are published, "Teardrops on My Guitar", "Our Song", "Picture to Burn" and "Should've Said No" are all highly successful on Billboard Hot Country Songs chart. </div>
 
 * * *

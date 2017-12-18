@@ -50,6 +50,12 @@ d3.csv("{{ "/project/web/data/q1_terms_by_year.csv" | relative_url }}", function
             x: {
                 type:'category',
                 categories: selection.map(function(year,index) { return year; })
+            },
+            y: {
+                label: {
+                    text: 'Count per genre',
+                    position: 'outer-middle'
+                }
             }
         }
     });
