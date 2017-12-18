@@ -6,6 +6,7 @@
 
 ## Final Project's Webpage:
 Go enjoy our project web page here: [Web for Songs-Project](https://goo.gl/VFLoC5)
+<br>**Note: Please use Google Chrome as our web is optimized for Chrome only.**
 
 ## Folder Strucure
 - 00 - Optional Homework : Homework 0

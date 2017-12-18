@@ -3,6 +3,7 @@
 > Project of Applied Data Analysis Course - 2017/2018
 
 Project Web page: [Web for Songs-Project](https://goo.gl/VFLoC5)
+<br>**Note: Please use Google Chrome as our web is optimized for Chrome only.**
 
 # Abstract
 > Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything. _-Plato_
