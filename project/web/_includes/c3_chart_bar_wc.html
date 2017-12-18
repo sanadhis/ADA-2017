@@ -64,7 +64,9 @@
               selection = document.getElementById("dropdown");
               newData = data.map(function(value,index) { return value[selection.value]; });
               newData.unshift(selection.value);
-              document.getElementById("imageWC").removeChild(img);
+              // document.getElementById("imageWC").removeChild(img);
+              var imgq3 = document.getElementById("imageWC");   // Get the <ul> element with id="myList"
+              imgq3.removeChild(imgq3.childNodes[0]); 
               if(selection.value == 'Top word count'){show_image('wc1.png',344,495,'Wordcloud');}
               else if(selection.value == 'Top word weight'){show_image('wc2.png',1000,450,'Wordcloud');}
               else if(selection.value == 'Full count'){show_image('wc3.png',860,380,'Wordcloud');}

@@ -67,4 +67,43 @@
                   .text(function(d) { return d; });
       });
     }
+
+    function changeTableContentQ2(artist_name){
+
+    var tb2 = document.getElementById("tableQ2");   // Get the <ul> element with id="myList"
+    tb2.removeChild(tb2.childNodes[0]);      
+
+    if(artist_name=="Ed_Sheeran"){
+      img_file = artist_name + ".jpg";
+    } else {
+      img_file = artist_name + ".png";
+    }
+
+    img        = document.createElement("img");
+    img.src    = "{{ "/project/web/img/" | relative_url }}"+img_file;
+    img.width  = 180;
+    img.height = 240;
+    img.alt    = artist_name;
+
+    var pictQ2 = document.getElementById("pictQ2");   // Get the <ul> element with id="myList"
+    pictQ2.removeChild(pictQ2.childNodes[0]);  
+    pictQ2.appendChild(img);
+
+    d3.text("{{ "/project/web/data/" | relative_url }}"+artist_name+".csv", function(data) {
+      var parsedCSV = d3.csv.parseRows(data);
+
+        var container = d3.select("#tableQ2")
+            .append("table")
+
+            .selectAll("tr")
+                .data(parsedCSV).enter()
+                .append("tr")
+
+            .selectAll("td")
+                .data(function(d) { return d; }).enter()
+                .append("td")
+                .text(function(d) { return d; });
+    });
+
+    }
 </script>

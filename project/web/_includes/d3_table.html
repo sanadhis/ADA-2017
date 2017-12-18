@@ -2,7 +2,7 @@
     d3.text("{{ "/project/web/data/Ed_Sheeran.csv" | relative_url }}", function(data) {
         var parsedCSV = d3.csv.parseRows(data);
 
-        var container = d3.select("#tableQ2_1")
+        var container = d3.select("#tableQ2")
             .append("table")
 
             .selectAll("tr")
@@ -15,19 +15,4 @@
                 .text(function(d) { return d; });
     });
 
-    d3.text("{{ "/project/web/data/Alan_Walker.csv" | relative_url }}", function(data) {
-        var parsedCSV = d3.csv.parseRows(data);
-
-        var container = d3.select("#tableQ2_2")
-            .append("table")
-
-            .selectAll("tr")
-                .data(parsedCSV).enter()
-                .append("tr")
-
-            .selectAll("td")
-                .data(function(d) { return d; }).enter()
-                .append("td")
-                .text(function(d) { return d; });
-    });
 </script>

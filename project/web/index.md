@@ -110,7 +110,7 @@ Are songs from popular artists usually popular? We collect 25 popular and 20 unp
 
 This kind of phenomenon is like “Rich gets richer”, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: 
 
-**Ed Sheeran**:
+<!-- **Ed Sheeran**:
 <div>
   <div class="table-div" id="tableQ2_1" styles="float:left"> 
   </div>
@@ -120,7 +120,20 @@ This kind of phenomenon is like “Rich gets richer”, once you gain more conne
 <div>
   <div class="table-div" id="tableQ2_2" styles="float:left"> 
   </div>
-</div>
+</div> -->
+
+<button class="button" onclick="changeTableContentQ2('Ed_Sheeran')">Ed Sheeran</button>
+<button class="button" onclick="changeTableContentQ2('Alan_Walker')">Alan Walker</button>
+
+<article class="markdown-body entry-content" itemprop="text"><table>
+<thead>
+</thead>
+<tbody>
+<tr>
+<td><div id="tableQ2"></div></td>
+<td><div id="pictQ2"><img src="img/Ed_Sheeran.jpg" width="180px" height="240px"></div></td>
+</tr></tbody></table>
+</article>
 
 {% include_relative _includes/d3_table.html %}
 
@@ -180,7 +193,7 @@ We have about **43.6% positive songs** and **56.4% negative songs** for the trac
 
 We have a ratio of **30.6% top songs** contain **bad words**. For the **unpopular songs** we get lower ratio of **22.1%**. So people might be more interested in borderline songs ?
 
-### Suggesting Songs to Certain Users
+### Users behaviours Analysis
 
 <button onclick="changeTableContent('user1')">User 1</button>
 <button onclick="changeTableContent('user2')">User 2</button>
