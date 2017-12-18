@@ -7,7 +7,7 @@ layout: default
 {% include_relative _includes/scripts.html %}
 ### Background
 
-Music has become one fundamental part in our daily activities. Unconsciously, we listen to music everytime and anywhere, e.g. while cooking, sitting in Rolex (either in silent area or not), coding your project, cycling to Vevey, and so on. 
+Music has become one fundamental part in our daily activities. Unconsciously, we listen to music everytime and anywhere, e.g. while cooking, sitting in Rolex (either in silent area or cafeteria), coding your project, cycling to Vevey, and so on. 
 
 * According to *[Spin](https://www.spin.com/2014/06/average-american-listening-habits-four-hours-audio-day/)*, in **average American listens to 4 hours** of music **each day**.
 
@@ -17,7 +17,7 @@ Music has become one fundamental part in our daily activities. Unconsciously, we
 <i>A famous violinist once said. Music transcends words. By exchanging notes, you get to know one another, to understand one another. As if your souls were connected and your hearts were overlapping. It's a conversation through instruments. A miracle that creates harmony. In that moment, music transcends words -<a href="http://www.azquotes.com/quote/1247952" target="_blank">K</a>.</i>
 </blockquote>
 
-It is widely known that music with lyrics, well known as "Songs", is one favorite way to express human emotional feelings and expressions. Song is one of the greatest creations of human kind in the course of history and now it has already been transformed into music industry.
+It is widely known that music with lyrics, well known as "Song", is one favorite way to express human emotional feelings and expressions. Song is one of the greatest creations of human kind in the course of history and now it has already been transformed into music industry.
 
 It is exicing for us to elaborate what factors influence songs popularity at most. Thus we present the analysis of songs' popularity as our final project for *[ADA course](https://dlab.epfl.ch/teaching/fall2017/cs401/)*!
 
@@ -110,7 +110,7 @@ Are songs from popular artists usually popular? We collect 25 popular and 20 unp
 
 This kind of phenomenon is like “Rich gets richer”, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: 
 
-**Ed Sheran**:
+**Ed Sheeran**:
 <div>
   <div class="table-div" id="tableQ2_1" styles="float:left"> 
   </div>
@@ -171,7 +171,7 @@ From a list of positively/negatively connoted words we determine whether a popul
 
 We have about **43.6% positive songs** and **56.4% negative songs** for the tracks with *high hotttnesss* and about **40% positive songs** and **60% negative songs** for the tracks with *low hotttnesss*. Here, we have no significant difference between popular and unpopular songs. 
 
-### Presence of "Slank Words" in Songs
+### Presence of "Slang Words" in Songs
 
 "Slang words", such as insults or controversed subjects, are gathered in frequencies within popular/unpopular songs which will give an estimation of the lyrics quality.
 
@@ -179,3 +179,38 @@ We have about **43.6% positive songs** and **56.4% negative songs** for the trac
 {% include_relative _includes/c3_chart_pie_q3_2.html %}
 
 We have a ratio of **30.6% top songs** contain **bad words**. For the **unpopular songs** we get lower ratio of **22.1%**. So people might be more interested in borderline songs ?
+
+### Suggesting Songs to Certain Users
+
+<button onclick="changeTableContent('user1')">User 1</button>
+<button onclick="changeTableContent('user2')">User 2</button>
+
+Our suggestion:
+<p id="description">
+Based on your playlist, 32.1 % of your playcounts contribute to at least 2 songs from the following singers:
+<br><br>
+Benabar :
+Les Mots D'Amour,
+L'Itinéraire,
+Y'a Une Fille Qu'Habite Chez Moi,
+<br><br>
+The genre you love the most:
+1. French
+</p>
+
+Based on user data:
+<article class="markdown-body entry-content" itemprop="text"><table>
+<thead>
+<tr>
+<th>Favorite Artist</th>
+<th>Favorite Genre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div id="tableQ4_1"></div></td>
+<td><div id="tableQ4_2"></div></td>
+</tr></tbody></table>
+</article>
+
+{% include_relative _includes/d3_table_2.html %}

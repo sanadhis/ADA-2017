@@ -18,4 +18,53 @@
       }
       x[slideIndex-1].style.display = "block";  
     }
+
+    function changeTableContent(user){
+
+      var description1 = "Based on your playlist, 32.1 % of your playcounts contribute to at least 2 songs from the following singers:<br><br>Benabar :Les Mots D'Amour,L'Itinéraire,Y'a Une Fille Qu'Habite Chez Moi,<br><br>The genre you love the most: 1.French"
+      var description2 = "Based on your playlist, 78.6 % of your playcounts contribute to at least 2 songs from the following singers:<br><br>Local Natives : Who Knows Who Cares, Sun Hands, Camera Talk <br> Phoenix : Girlfriend, Armistice <br> This Will Destroy You : Quiet, There Are Some Remedies Worse Than The Disease <br> Happiness: We're All In It Together <br><br> The genre you love the most: 1.indie, 2.post-rock"
+      var tb4_1 = document.getElementById("tableQ4_1");   // Get the <ul> element with id="myList"
+      tb4_1.removeChild(tb4_1.childNodes[0]); 
+
+      var tb4_2 = document.getElementById("tableQ4_2");   // Get the <ul> element with id="myList"
+      tb4_2.removeChild(tb4_2.childNodes[0]);     
+
+      if(user=="user1"){
+        document.getElementById("description").innerHTML = description1;
+      } else {
+        document.getElementById("description").innerHTML = description2;
+      }
+
+      d3.text("{{ "/project/web/data/favorite_singer_" | relative_url }}"+user+".csv", function(data) {
+        var parsedCSV = d3.csv.parseRows(data);
+
+          var container = d3.select("#tableQ4_1")
+              .append("table")
+
+              .selectAll("tr")
+                  .data(parsedCSV).enter()
+                  .append("tr")
+
+              .selectAll("td")
+                  .data(function(d) { return d; }).enter()
+                  .append("td")
+                  .text(function(d) { return d; });
+      });
+
+      d3.text("{{ "/project/web/data/genre_" | relative_url }}"+user+".csv", function(data) {
+          var parsedCSV = d3.csv.parseRows(data);
+
+          var container = d3.select("#tableQ4_2")
+              .append("table")
+
+              .selectAll("tr")
+                  .data(parsedCSV).enter()
+                  .append("tr")
+
+              .selectAll("td")
+                  .data(function(d) { return d; }).enter()
+                  .append("td")
+                  .text(function(d) { return d; });
+      });
+    }
 </script>
