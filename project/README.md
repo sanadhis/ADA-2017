@@ -173,21 +173,8 @@ FORMAT:
             then word count for each of the top words, comma-separated
             word count is in sparse format -> ...,<word idx>:<cnt>,...
             <word idx> starts at 1 (not zero!)
-
-3. [The Last.fm Dataset](https://labrosa.ee.columbia.edu/millionsong/lastfm) :
-For every songs it gives both a list of tags that defines the song (genre, instruments...) and a list of similar songs alongside the value of the similarity measure that was used. The dataset will come in quiet handy when checking for plagiarism or high ressemblance.
-
-FORMAT:
-
-      Several .json files in different directory (A-Z)
-      Keys in .json files:
-      'tags'       - style of the song such as rock, hard rock
-      'artist'     - name of the singer
-      'title'      - name of the song
-      'timestamps' - date
-      'similar'    - similarity measure of songs, range from 0 to 1 
       
-4. [The Echo Nest Taste Profile Subset](https://labrosa.ee.columbia.edu/millionsong/tasteprofile) :
+3. [The Echo Nest Taste Profile Subset](https://labrosa.ee.columbia.edu/millionsong/tasteprofile) :
 This represents the profiles of real users in which we can find for every profile the play count for some song in the original dataset. It covers about a third of the tracks available in the million songs dataset and will give us a good representation of the musical trend.
 
 FORMAT:
