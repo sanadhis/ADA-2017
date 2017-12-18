@@ -122,20 +122,20 @@ In this problem, we also focus on popular singers. We want to see whether the fi
 ### Q3.1 Do people care more about lyrics?
 We want to see what are most frequent words popular songs.
 #### Design of experiment:
-* Load the datasets into dataframes.
-* Remove stopwords from mxm_lyrics dataset.
-* Merge msd\_data with mxm_lyrics
-* Plot the overall most frequent words regardless of songs popularity.
-* Plot the overall most frequent words across popular songs.
-* Plot the overall most frequent words across unpopular songs.
+* Fetch approximate equal number of popular and unpopular songs for which we have lyrics
+* Remove most uninformative words (stopwords)
+* Look at the most frequent top word for each song
+* Look at the most frequent words in the whole dataset
+* Analysis of the different exctracted topics
+* Sentiment analysis of the lyrics (positive/negative songs)
 
-### Q3.2 Can we measure the quality and popularity of a song from its lyrics? Do the popular songs have the good quality of lyrics from literacy view points?
+### Q3.2 Can we observe politeness of Lyrics in Popular Songs?
 Quality of lyrics in literacy point of view can be observed by measuring the occurences of "slang words".
 #### Design of experiment:
-* Load list of bad/slang words (obtained from google).
-* Count the average ratio of bad/slang words in popular and unpopular songs.
-* Observe and comment.
-* Justify the result by comparing words density of popular and unpopular songs.
+* Fetch slang words
+* Get the proportion of slang words in popular/unpopular songs
+* Analyse and compare results
+* *Additional*: Compute density of lyrics by counting number of words per song duration
 
 ## Q4 Bonus - User Behavior Analysis
 This part is the additional part we added after milestone II. The objective is to reveal the behavior of the user
