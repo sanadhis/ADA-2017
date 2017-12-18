@@ -132,7 +132,7 @@ Do the songs in the first year matter a lot for artist? Are they key to success 
 The scatter plot tells us artists may need to seize the opportunity in their first year because several recently popular singers make a success during their first year! Let us give 2 classical examples: Psy and Taylor Swift:
 
 <div class="clearfix">
-<img src="img/psy.jpg" class="img3" width="120px" height="120px">
+<img src="img/Psy.jpg" class="img3" width="120px" height="120px">
  The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
 
 <div class="clearfix">
