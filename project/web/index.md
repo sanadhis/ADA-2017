@@ -29,10 +29,10 @@ In addition we also utilize two additional datasets:
 * [The musiXmatch Dataset](https://labrosa.ee.columbia.edu/millionsong/musixmatch): Containing lyrics.
 * [The Echo Nest Taste Profile Subset](https://labrosa.ee.columbia.edu/millionsong/tasteprofile) : Containing profiles of real users with their play count.
 
-Important features of Million Song Dataset:
+Important fields of Million Song Dataset:
 <dl>
 <dt>track_id</dt>
-<dd>The primary identifier for all songs in dataset.</dd>
+<dd>The primary identifier field for all songs in dataset.</dd>
 <dt>song_hotttnesss</dt>
 <dd>the popularity of a song measured with value of between 0 - 1.</dd>
 </dl>
@@ -54,33 +54,45 @@ In order to obtain more accurate results, we use **random forest classifier** to
 <dd>The indication of how well-known an artist is (usually last for longer-term)</dd>
 </dl>
 
-### Exploratory Data Analysis
-We analyze how artist
+### More into Exploratory Data Analysis
+#### Same Artist and Same Release Album
+Let's compare the distribution of occurence for popular and unpopular songs coming from same artist and release album in order to justify the previous results.
 
-Distributions
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="img/sample1.png" style="width:75%;display:block">
-  <img class="mySlides" src="img/sample1.png" style="width:75%;display:none">  
+  <img class="mySlides" src="img/Q1_2.png" style="width:75%;display:block">
+  <img class="mySlides" src="img/Q1_3.png" style="width:75%;display:none">  
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
-#### Distribution of Popular and Unpopular Songs Across the world
+While we infer that, in average, at least 4 of popular songs are coming from the same artist, we see that there is a tiny clear distinction between popular songs and unpopular songs. In average, at least a popular release album has two of its songs in popular songs list. 
+
+This strengthen our previous analysis that an artist himself/herself (artist_hotttnesss and artist_familiriaty) gives significant correlation to the song_hotttnesss.
+
+#### Location of Popular and Unpopular Songs Across the world
+Popular = <span style="color:blue">Blue</span>, Unpopular = <span style="color:green">Green</span>
 <iframe src="https://sanadhis.github.io/ITT-ADA-2017/project/web/maps/songs_distribution.html" width="100%" height="400">Your browser does not support iframes.</iframe>
+We spot for both popular and unpopular songs, they are mostly coming either from United States (Eastern America) or European Union (England). In general, songs coming from non-english countries are tend to be unpopular. There is a high possibility that audiences around the world prefer to listen for songs in English.
 
 ### Genres over time
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
+Rock songs are favorite music for audiences from 2001-2009.
 
 <div id="dropQ1" align="center"></div>
-<svg width="100%" height="500" id="barChartQ1"></svg>
+<svg width="100%" height="300" id="barChartQ1"></svg>
 
 {% include_relative _includes/d3_chart_bar_q1.html %}
 
 <div id="chart"></div>
 {% include_relative _includes/c3_chart_line.html %}
 
-### Herding Bias in Songs
+However, in 2010, "pop" becomes the top first popular genre. This indicate that music popularity is inconsistent and can change as time goes by.
+
+
+* * *
+
+<h2 style="text-align: center;"> Herding Bias in Songs </h2>
+
 Have you taken a close look at your playlist? Do you notice that several songs from your playlist are actually from certain artists?
 
 We define this phenomenon as herding bias, and we guess this phenomenon would exist because once the artist/artist gives a positive impression on users, they are more willing to listen to, or even more likely to love their songs. To measure the degree of herding bias, we use the following formula:
@@ -103,7 +115,7 @@ Picture of artist & Table.
 ### The Importance of First Performance
 Do the songs in the first year matter a lot for artist? Are they key to success for artists? We observe nowadays people could get popular or famous because of single event (You always can find viral videos to watch when you are bored, right?), and hence we want to see whether this would also somehow lead to the career success of a singer. To do so, we choose several popular and unpopular artists during 1995-2000, 2000-2005 and 2005-2010, and observe the song hotness of their songs in their first year:
 
-<img src="img/Q2_3.PNG" class="img-centered">
+<img src="img/Q2_3.PNG" class="img-centered" style="width:60%;height:300;">
 
 The scatter plot tells us artists may need to seize the opportunity in their first year because several recently popular singers make a success during their first year! Let us give 2 classical examples: Psy and Taylor Swift:
 
