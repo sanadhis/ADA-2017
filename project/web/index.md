@@ -41,20 +41,33 @@ Important features of Million Song Dataset:
 
 <h2 style="text-align: center;"> Observing Songs' Popularity </h2>
 
-### Characteristics
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
+### Important Features of Popular Songs
+Using correlation matrix, we can briefly observe which features influences songs' popularity. Compared with other features, **artist_familiarity**, **artist_hotttnesss**, **year** have stronger correlation into **song_hotttnesss**.
 
-Map
-<iframe src="https://sanadhis.github.io/ITT-ADA-2017/project/web/maps/songs_distribution.html" width="100%" height="400">Your browser does not support iframes.</iframe>
+<img src="img/Q1_1.png" class="img-centered" style="width:100%;height:100%;">
+
+In order to obtain more accurate results, we use **random forest classifier** to predict whether a song is popular/unpopular. We get a high accuracy of **97,52%** by random forest, and then we observe the attribute **feature\_importances** to see which feature matters the most. We figure out that two most important features are:
+<dl>
+<dt>artist_hotttnesss</dt>
+<dd>The popularity of an artist (usually last for short-term)</dd>
+<dt>artist_familiarity</dt>
+<dd>The indication of how well-known an artist is (usually last for longer-term)</dd>
+</dl>
+
+### Exploratory Data Analysis
+We analyze how artist
 
 Distributions
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="img/sample1.png" style="width:75%">
+  <img class="mySlides" src="img/sample1.png" style="width:75%;display:block">
   <img class="mySlides" src="img/sample1.png" style="width:75%;display:none">  
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+
+#### Distribution of Popular and Unpopular Songs Across the world
+<iframe src="https://sanadhis.github.io/ITT-ADA-2017/project/web/maps/songs_distribution.html" width="100%" height="400">Your browser does not support iframes.</iframe>
 
 ### Genres over time
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id semper massa. Vivamus ultricies massa vel nisl dapibus mattis. Duis id urna elit. Vivamus dapibus tristique purus vitae rhoncus. Suspendisse bibendum eget sem non laoreet. Donec et egestas odio. Pellentesque tortor risus, dapibus finibus feugiat lobortis, mattis non ex. Integer vitae urna vitae nulla dapibus pulvinar vitae nec turpis. Donec at elementum urna. Etiam vehicula auctor velit at egestas.
