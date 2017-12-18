@@ -108,9 +108,21 @@ Are songs from popular artists usually popular? We collect 25 popular and 20 unp
 
 <img src="img/Q2_2.PNG" class="img-centered">
 
-This kind of phenomenon is like “Rich gets richer”, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: Ed Sheeran and Alan worker
+This kind of phenomenon is like “Rich gets richer”, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: 
 
-Picture of artist & Table.
+**Ed Sheran**:
+<div>
+  <div class="table-div" id="tableQ2_1" styles="float:left"> 
+  </div>
+</div>
+
+**Alan Walker**:
+<div>
+  <div class="table-div" id="tableQ2_2" styles="float:left"> 
+  </div>
+</div>
+
+{% include_relative _includes/d3_table.html %}
 
 ### The Importance of First Performance
 Do the songs in the first year matter a lot for artist? Are they key to success for artists? We observe nowadays people could get popular or famous because of single event (You always can find viral videos to watch when you are bored, right?), and hence we want to see whether this would also somehow lead to the career success of a singer. To do so, we choose several popular and unpopular artists during 1995-2000, 2000-2005 and 2005-2010, and observe the song hotness of their songs in their first year:
@@ -119,9 +131,30 @@ Do the songs in the first year matter a lot for artist? Are they key to success 
 
 The scatter plot tells us artists may need to seize the opportunity in their first year because several recently popular singers make a success during their first year! Let us give 2 classical examples: Psy and Taylor Swift:
 
-Picture of artist & Description.
+<!-- <div class="gallery">
+  <a target="_blank" href="img/psy.jpg">
+    <img src="img/psy.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
+</div>
 
-The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.
+<div class="gallery">
+  <a target="_blank" href="img/Taylor_Swift.jpg">
+
+  <div class="desc">The American artist, Taylor Swift, starts her career since 2006. In 2007 and 2008, four single songs are published, "Teardrops on My Guitar", "Our Song", "Picture to Burn" and "Should've Said No" are all highly successful on Billboard Hot Country Songs chart</div>
+</div> -->
+
+<div class="clearfix">
+<img src="img/psy.jpg" class="img3" width="120px" height="120px">
+ The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
+
+<div class="clearfix">
+<img src="img/Taylor_Swift.jpg" class="img2" width="120px" height="120px">
+ The American artist, Taylor Swift, starts her career since 2006. In 2007 and 2008, four single songs are published, "Teardrops on My Guitar", "Our Song", "Picture to Burn" and "Should've Said No" are all highly successful on Billboard Hot Country Songs chart. </div>
+
+* * *
+
+<h2 style="text-align: center;"> Lyrics of Songs </h2>
 
 ### Do people care about Lyrics?
 In this question we will try to find wether people tend to listen to songs that contains certain terms or themes and if popular songs themes differ from the ones discussed in unpopular tracks.
