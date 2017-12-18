@@ -1,0 +1,22 @@
+<script>
+
+    var pieChart1 = c3.generate({
+        bindto: '#pieChartQ3_1',
+        data: {
+            // iris data from R
+            columns: [
+                ['positive_songs', 43560],
+                ['negative_songs', 56439],
+            ],
+            colors: {
+                positive_songs: '#27ae60',
+                negative_songs: '#e74c3c'
+            },
+            type : 'pie',
+            onclick: function (d, i) { console.log("onclick", d, i); },
+            onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        }
+    });
+
+</script>

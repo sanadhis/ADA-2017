@@ -1,0 +1,106 @@
+<script>
+      
+    var img = document.createElement("img");
+    function show_image(src, width, height, alt) {
+      img = document.createElement("img");
+      img.src = "{{ "/project/web/img/" | relative_url }}"+src;
+      img.width = width;
+      img.height = height;
+      img.alt = alt;
+    
+      // This next line will just add it to the <body> tag
+      document.getElementById("imageWC").appendChild(img);
+    }
+    
+    show_image('wc1.png',344,495,'Wordcloud');
+    
+    //replace by csv if you want
+    d3.csv("{{ "/project/web/data/barsPart3.csv" | relative_url }}", function(error, data){
+      
+      var data = data
+      // Get every column value
+      var elements = Object.keys(data[0])
+        .filter(function(d){
+          //index column removed
+          return (d != "Word1" && d != "Word2" && d != "Word3" && d != "Word4");
+        });
+      var selection = elements[0];
+    
+      newData = data.map(function(value,index) { return value[selection]; });
+      newData.unshift(selection);
+    
+      var chartQ3_bar = c3.generate({
+        bindto: "#barChart",
+        data: {
+          columns: [
+              newData
+          ],
+          type: 'bar'
+        },
+        bar: {
+          width: {
+            ratio: 0.75 // this makes bar width 75% of length between ticks
+          }
+        },
+        axis: {
+          x: {
+            type:'category',
+            categories: data.map(function(value,index) {
+              return value['Word1']; })
+          }
+        }
+      });
+    
+      var selector = d3.select("#drop")
+          .append("select")
+          .attr("id","dropdown")
+          .on("change", function(d){
+              selection = document.getElementById("dropdown");
+              newData = data.map(function(value,index) { return value[selection.value]; });
+              newData.unshift(selection.value);
+              document.getElementById("imageWC").removeChild(img);
+              if(selection.value == 'Top word count'){show_image('wc1.png',344,495,'Wordcloud');}
+              else if(selection.value == 'Top word weight'){show_image('wc2.png',1000,450,'Wordcloud');}
+              else if(selection.value == 'Full count'){show_image('wc3.png',860,380,'Wordcloud');}
+              else if(selection.value == 'Top songs count'){show_image('wc4.png',412,412,'Wordcloud');}
+              chartQ3_bar = c3.generate({
+                bindto: "#barChart",
+                data: {
+                  columns: [
+                      newData
+                  ],
+                  type: 'bar'
+                },
+                bar: {
+                  width: {
+                    ratio: .75 // this makes bar width 75% of length between ticks
+                  }
+                },
+                axis: {
+                  x: {
+                    type:'category',
+                    categories: data.map(function(value,index) {
+                      if(selection.value == 'Top word count'){return value['Word1'];}
+                      else if(selection.value == 'Top word weight'){return value['Word2'];}
+                      else if(selection.value == 'Full count'){return value['Word3'];}
+                      else if(selection.value == 'Top songs count'){return value['Word4'];}
+                      return value['Word1']; })
+                  }
+                }
+              });
+    
+             });
+    
+        selector.selectAll("option")
+          .data(elements)
+          .enter().append("option")
+          .attr("value", function(d){
+            return d;
+          })
+          .text(function(d){
+            return d;
+          })
+    
+    });
+    
+</script>

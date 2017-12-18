@@ -131,19 +131,6 @@ Do the songs in the first year matter a lot for artist? Are they key to success 
 
 The scatter plot tells us artists may need to seize the opportunity in their first year because several recently popular singers make a success during their first year! Let us give 2 classical examples: Psy and Taylor Swift:
 
-<!-- <div class="gallery">
-  <a target="_blank" href="img/psy.jpg">
-    <img src="img/psy.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img/Taylor_Swift.jpg">
-
-  <div class="desc">The American artist, Taylor Swift, starts her career since 2006. In 2007 and 2008, four single songs are published, "Teardrops on My Guitar", "Our Song", "Picture to Burn" and "Should've Said No" are all highly successful on Billboard Hot Country Songs chart</div>
-</div> -->
-
 <div class="clearfix">
 <img src="img/psy.jpg" class="img3" width="120px" height="120px">
  The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
@@ -156,34 +143,39 @@ The scatter plot tells us artists may need to seize the opportunity in their fir
 
 <h2 style="text-align: center;"> Lyrics of Songs </h2>
 
-### Do people care about Lyrics?
-In this question we will try to find wether people tend to listen to songs that contains certain terms or themes and if popular songs themes differ from the ones discussed in unpopular tracks.
-As a result we have produced four pairs of word clouds and bar plots :
+Do people tend to listen to songs that contains certain terms or themes? Do popular songs themes differ from the ones discussed in unpopular tracks?
+
+<div id="drop" align="center"></div>
+<svg width="100%" height="300" id="barChart"></svg>
+<div id="imageWC" align="center"></div>
+
+{% include_relative _includes/c3_chart_bar_wc.html %}
+
+Explanation:
 - Top word count: we take the most recurrent word in every top/worst song and look at what are the most common top words.
 - Top word weight: which is the same as the previous category but weighted using the duration of the songs.
 - Full count: we consider the full lyrics dataset without taking care of hotttnesss, we’re counting all the words for every tracks and summing them.
 - Top songs count: we repeat the previous operation, but this time on the top/worst songs.
+
 The results being very similar for the popular and unpopular songs we only display the figures for the popular songs.
 For the two first categories we have that the top word is by far ‘yeah'. Hence as a first conclusion we might say people do not really care about lyrics as 'yeah' isn't related to any specific topic. Appart from 'yeah' we can see a lot of top words concerning themes such as youth, the world/people, and verbs that refer to desire(wish, want…).
+
 For the two remaining categories we have a different result. Over all the songs we can see that the most recurrent word is 'love' and there are many other high-ranked words that recall feelings (feel, like, want, baby, heart, girl...).
 
-DISPLAY PLOTS
+### Sentiment Analysis of Songs
 
-Next we did some sentiment analysis on the lyrics. From a list of positively/negatively connoted words we tried to determine whether a popular song is usually positive(happy) or negative(sad).
+From a list of positively/negatively connoted words we determine whether a popular song is usually positive(happy) or negative(sad).
 
-<div id="pieChart"></div>
-{% include_relative _includes/c3_chart_pie.html %}
+<div id="pieChartQ3_1"></div>
+{% include_relative _includes/c3_chart_pie_q3_1.html %}
 
-We can see that we have about 43.6% positive songs and 56.4% negative songs for the tracks with high hotttnesss and about 40% positive songs and 60% negative songs for the tracks with low hotttnesss. There again we have no significant difference between popular and unpopular songs. It might be interesting to redo the same analysis per music genre for further precision.
+We have about **43.6% positive songs** and **56.4% negative songs** for the tracks with *high hotttnesss* and about **40% positive songs** and **60% negative songs** for the tracks with *low hotttnesss*. Here, we have no significant difference between popular and unpopular songs. 
 
-<div id="drop" align="center"></div>
-<svg width="100%" height="500" id="barChart"></svg>
+### Presence of "Slank Words" in Songs
 
-{% include_relative _includes/d3_chart_bar.html %}
+"Slang words", such as insults or controversed subjects, are gathered in frequencies within popular/unpopular songs which will give an estimation of the lyrics quality.
 
-### Presence of "Slank Words" in Popular Songs and Unpopular Songs
-In this part we will focus on "slang words" such as insults or controversed subjects and gather their frequencies in popular/unpopular songs which will give us an estimation of the lyrics quality.
+<div id="pieChartQ3_2"></div>
+{% include_relative _includes/c3_chart_pie_q3_2.html %}
 
-PIECHART ?
-
-We have a ratio of 0.31 top songs containing bad words. For the low hotttnesss songs we can actually see that we only have 0.22 as a ratio. We can also see that some songs with a very high hotttness having 1/5 words being a slang word, so people might be more interested in borderline songs ?
+We have a ratio of **30.6% top songs** contain **bad words**. For the **unpopular songs** we get lower ratio of **22.1%**. So people might be more interested in borderline songs ?
