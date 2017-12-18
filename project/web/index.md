@@ -110,18 +110,6 @@ Are songs from popular artists usually popular? We collect 25 popular and 20 unp
 
 This kind of phenomenon is like “Rich gets richer”, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: 
 
-<!-- **Ed Sheeran**:
-<div>
-  <div class="table-div" id="tableQ2_1" styles="float:left"> 
-  </div>
-</div>
-
-**Alan Walker**:
-<div>
-  <div class="table-div" id="tableQ2_2" styles="float:left"> 
-  </div>
-</div> -->
-
 <button class="button" onclick="changeTableContentQ2('Ed_Sheeran')">Ed Sheeran</button>
 <button class="button" onclick="changeTableContentQ2('Alan_Walker')">Alan Walker</button>
 
@@ -193,37 +181,25 @@ We have about **43.6% positive songs** and **56.4% negative songs** for the trac
 
 We have a ratio of **30.6% top songs** contain **bad words**. For the **unpopular songs** we get lower ratio of **22.1%**. So people might be more interested in borderline songs ?
 
-### Users behaviours Analysis
+### Example of Users behaviours Analysis
 
-<button onclick="changeTableContent('user1')">User 1</button>
-<button onclick="changeTableContent('user2')">User 2</button>
+<button class="button" onclick="changeUserContent('user1')">User 1</button>
+<button class="button" onclick="changeUserContent('user2')">User 2</button>
 
-Our suggestion:
+User analysis:
 <p id="description">
-Based on your playlist, 32.1 % of your playcounts contribute to at least 2 songs from the following singers:
+Based on playlist record, 32.1 % of user playcounts contribute to at least 2 songs from the following singers:
 <br><br>
-Benabar :
+Benabar:
 Les Mots D'Amour,
 L'Itinéraire,
 Y'a Une Fille Qu'Habite Chez Moi,
 <br><br>
-The genre you love the most:
+The genre this user love the most:
 1. French
 </p>
 
-Based on user data:
-<article class="markdown-body entry-content" itemprop="text"><table>
-<thead>
-<tr>
-<th>Favorite Artist</th>
-<th>Favorite Genre</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><div id="tableQ4_1"></div></td>
-<td><div id="tableQ4_2"></div></td>
-</tr></tbody></table>
-</article>
+<svg width="100%" height="300" id="barChartQ4_1"></svg>
+<svg width="100%" height="300" id="barChartQ4_2"></svg>
 
-{% include_relative _includes/d3_table_2.html %}
+{% include_relative _includes/d3_chart_bar_q4.html %}

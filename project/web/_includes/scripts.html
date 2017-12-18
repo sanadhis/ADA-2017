@@ -19,15 +19,10 @@
       x[slideIndex-1].style.display = "block";  
     }
 
-    function changeTableContent(user){
+    function changeUserContent(user){
 
-      var description1 = "Based on your playlist, 32.1 % of your playcounts contribute to at least 2 songs from the following singers:<br><br>Benabar :Les Mots D'Amour,L'Itinéraire,Y'a Une Fille Qu'Habite Chez Moi,<br><br>The genre you love the most: 1.French"
-      var description2 = "Based on your playlist, 78.6 % of your playcounts contribute to at least 2 songs from the following singers:<br><br>Local Natives : Who Knows Who Cares, Sun Hands, Camera Talk <br> Phoenix : Girlfriend, Armistice <br> This Will Destroy You : Quiet, There Are Some Remedies Worse Than The Disease <br> Happiness: We're All In It Together <br><br> The genre you love the most: 1.indie, 2.post-rock"
-      var tb4_1 = document.getElementById("tableQ4_1");   // Get the <ul> element with id="myList"
-      tb4_1.removeChild(tb4_1.childNodes[0]); 
-
-      var tb4_2 = document.getElementById("tableQ4_2");   // Get the <ul> element with id="myList"
-      tb4_2.removeChild(tb4_2.childNodes[0]);     
+      var description1 = "Based on playlist record, 32.1 % of user playcounts contribute to at least 2 songs from the following singers:<br><br>Benabar :Les Mots D'Amour,L'Itinéraire,Y'a Une Fille Qu'Habite Chez Moi,<br><br>The genre this user love the most: 1.French"
+      var description2 = "Based on playlist record, 78.6 % of user playcounts contribute to at least 2 songs from the following singers:<br><br>Local Natives : Who Knows Who Cares, Sun Hands, Camera Talk <br> Phoenix : Girlfriend, Armistice <br> This Will Destroy You : Quiet, There Are Some Remedies Worse Than The Disease <br> Happiness: We're All In It Together <br><br> The genre this user love the most: 1.indie, 2.post-rock"  
 
       if(user=="user1"){
         document.getElementById("description").innerHTML = description1;
@@ -35,36 +30,90 @@
         document.getElementById("description").innerHTML = description2;
       }
 
-      d3.text("{{ "/project/web/data/favorite_singer_" | relative_url }}"+user+".csv", function(data) {
-        var parsedCSV = d3.csv.parseRows(data);
-
-          var container = d3.select("#tableQ4_1")
-              .append("table")
-
-              .selectAll("tr")
-                  .data(parsedCSV).enter()
-                  .append("tr")
-
-              .selectAll("td")
-                  .data(function(d) { return d; }).enter()
-                  .append("td")
-                  .text(function(d) { return d; });
+        //replace by csv if you want
+        d3.csv("{{ "/project/web/data/favorite_singer_" | relative_url }}"+user+".csv", function(error, data){
+        
+          var data = data
+          // Get every column value
+          var elements = Object.keys(data[0])
+              .filter(function(d){
+            //index column removed
+                  return (d != "artist");
+              });
+          var selection = elements[0];
+      
+        newData = data.map(function(value,index) { return value["play_count"]; });
+        newData.unshift("Artist");
+      
+        var chart = c3.generate({
+          bindto: "#barChartQ4_1",
+          data: {
+            columns: [
+                newData
+            ],
+            type: 'bar'
+          },
+          bar: {
+            width: {
+              ratio: 0.75 // this makes bar width 75% of length between ticks
+            }
+          },
+          axis: {
+            x: {
+              type:'category',
+              categories: data.map(function(value,index) { return value['artist']; })
+            },
+            y: {
+              label: {
+                  text: 'Play count',
+                  position: 'outer-middle'
+              }
+            }
+          }
+        });
+      
       });
+      
+      d3.csv("{{ "/project/web/data/genre_" | relative_url }}"+user+".csv", function(error, data){
+      
+          var data = data
+          // Get every column value
+          var elements = Object.keys(data[0])
+              .filter(function(d){
+          //index column removed
+                  return (d != "genre");
+              });
+          var selection = elements[0];
 
-      d3.text("{{ "/project/web/data/genre_" | relative_url }}"+user+".csv", function(data) {
-          var parsedCSV = d3.csv.parseRows(data);
+          newData = data.map(function(value,index) { return value["play_count"]; });
+          newData.unshift("Genre");
 
-          var container = d3.select("#tableQ4_2")
-              .append("table")
-
-              .selectAll("tr")
-                  .data(parsedCSV).enter()
-                  .append("tr")
-
-              .selectAll("td")
-                  .data(function(d) { return d; }).enter()
-                  .append("td")
-                  .text(function(d) { return d; });
+          var chart = c3.generate({
+              bindto: "#barChartQ4_2",
+              data: {
+              columns: [
+                  newData
+              ],
+              type: 'bar'
+              },
+              bar: {
+              width: {
+                  ratio: 0.75 // this makes bar width 75% of length between ticks
+              }
+              },
+              axis: {
+              x: {
+                  type:'category',
+                  categories: data.map(function(value,index) { return value['genre']; })
+              },
+              y: {
+                  label: {
+                      text: 'Play count',
+                      position: 'outer-middle'
+                  }
+              }
+              }
+          });
       });
     }
 

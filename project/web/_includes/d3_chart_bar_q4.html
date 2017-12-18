@@ -1,0 +1,88 @@
+<script>
+    //replace by csv if you want
+    d3.csv("{{ "/project/web/data/favorite_singer_user1.csv" | relative_url }}", function(error, data){
+    
+        var data = data
+        // Get every column value
+        var elements = Object.keys(data[0])
+            .filter(function(d){
+          //index column removed
+                return (d != "artist");
+            });
+        var selection = elements[0];
+    
+      newData = data.map(function(value,index) { return value["play_count"]; });
+      newData.unshift("Artist");
+    
+      var chart = c3.generate({
+        bindto: "#barChartQ4_1",
+        data: {
+          columns: [
+              newData
+          ],
+          type: 'bar'
+        },
+        bar: {
+          width: {
+            ratio: 0.75 // this makes bar width 75% of length between ticks
+          }
+        },
+        axis: {
+          x: {
+            type:'category',
+            categories: data.map(function(value,index) { return value['artist']; })
+          },
+          y: {
+            label: {
+                text: 'Play count',
+                position: 'outer-middle'
+            }
+          }
+        }
+      });
+    
+    });
+    
+    d3.csv("{{ "/project/web/data/genre_user1.csv" | relative_url }}", function(error, data){
+    
+        var data = data
+        // Get every column value
+        var elements = Object.keys(data[0])
+            .filter(function(d){
+        //index column removed
+                return (d != "genre");
+            });
+        var selection = elements[0];
+
+        newData = data.map(function(value,index) { return value["play_count"]; });
+        newData.unshift("Genre");
+
+        var chart = c3.generate({
+            bindto: "#barChartQ4_2",
+            data: {
+            columns: [
+                newData
+            ],
+            type: 'bar'
+            },
+            bar: {
+            width: {
+                ratio: 0.75 // this makes bar width 75% of length between ticks
+            }
+            },
+            axis: {
+            x: {
+                type:'category',
+                categories: data.map(function(value,index) { return value['genre']; })
+            },
+            y: {
+                label: {
+                    text: 'Play count',
+                    position: 'outer-middle'
+                }
+            }
+            }
+        });
+    });
+
+</script>
