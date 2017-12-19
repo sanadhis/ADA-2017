@@ -97,6 +97,11 @@ Have you taken a close look at your playlist? Do you notice that several songs f
 
 We define this phenomenon as herding bias, and we guess this phenomenon would exist because once the artist/artist gives a positive impression on users, they are more willing to listen to, or even more likely to love their songs. To measure the degree of herding bias, we use the following formula:
 
+<img src="img/formula.PNG" class="img-centered" style="width:35%;height:35%;">
+
+Consider there are M data of user, p<sub>m</sub> is play_count of m<sub>th</sub> user, and s<sub>m</sub> is the singer of m<sub>th</sub> data where I<sub>m</sub> is equal to 1 when s<sub>m</sub> exists more than once in M data, and is equal to 0 otherwise (exists only once).
+
+
 We analyze playlists of **1022 users**, and get the following distribution (To avoid misleading in histogram, we make bins = 50 to get a higher resolution.) 
 
 <img src="img/Q2_1.PNG" class="img-centered">
