@@ -55,7 +55,7 @@ In order to obtain more accurate results, we use **random forest classifier** to
 </dl>
 
 ### More into Exploratory Data Analysis
-#### Same Artist and Same Release Album
+#### Artist and Release Album
 Let's compare the distribution of occurence for popular and unpopular songs coming from same artist and release album in order to justify the previous results.
 
 <div class="w3-content w3-display-container">
@@ -66,14 +66,14 @@ Let's compare the distribution of occurence for popular and unpopular songs comi
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
 
-While we infer that, in average, at least 4 of popular songs are coming from the same artist, we see that there is a tiny clear distinction between popular songs and unpopular songs. In average, at least a popular release album has two of its songs in popular songs list. 
+While we infer that, in average, at least **4 of popular songs** are coming from the **same artist**, we see that there is a tiny clear distinction between popular songs and unpopular songs. In average, at least **two popular songs** are coming from the **same release album** in list.
 
 This strengthen our previous analysis that an artist himself/herself (artist_hotttnesss and artist_familiriaty) gives significant correlation to the song_hotttnesss.
 
 #### Location of Popular and Unpopular Songs Across the world
 Popular = <span style="color:blue">Blue</span>, Unpopular = <span style="color:green">Green</span>
 <iframe src="https://sanadhis.github.io/ITT-ADA-2017/project/web/maps/songs_distribution.html" width="100%" height="400">Your browser does not support iframes.</iframe>
-We spot for both popular and unpopular songs, they are mostly coming either from United States (Eastern America) or European Union (England). In general, songs coming from non-english countries are tend to be unpopular. There is a high possibility that audiences around the world prefer to listen for songs in English.
+We spot for both popular and unpopular songs, they are mostly coming either from United States (Eastern America) or European Union (England). In general, **songs coming from non-english countries** are tend to be **unpopular**. There is a high possibility that audiences around the world prefer to listen for songs in English.
 
 ### Popular Genres over Time
 Rock songs are favorite music for audiences from 2001-2009.
@@ -86,7 +86,7 @@ Rock songs are favorite music for audiences from 2001-2009.
 <div id="chart"></div>
 {% include_relative _includes/c3_chart_line.html %}
 
-However, in 2010, "pop" becomes the top first popular genre. This indicate that music popularity is inconsistent and can change as time goes by.
+However, in 2010, **pop** becomes the top first popular genre. This indicate that music popularity is inconsistent and can change as time goes by.
 
 
 * * *
@@ -97,18 +97,18 @@ Have you taken a close look at your playlist? Do you notice that several songs f
 
 We define this phenomenon as herding bias, and we guess this phenomenon would exist because once the artist/artist gives a positive impression on users, they are more willing to listen to, or even more likely to love their songs. To measure the degree of herding bias, we use the following formula:
 
-We analyze playlists of 1022 users, and get the following distribution (To avoid misleading in histogram, we make bins = 50 to get a higher resolution.) 
+We analyze playlists of **1022 users**, and get the following distribution (To avoid misleading in histogram, we make bins = 50 to get a higher resolution.) 
 
 <img src="img/Q2_1.PNG" class="img-centered">
 
-We find there 160 people out of 1022 people (only 16%) don’t have herding bias, and the median value is of herding bias is 0.38, which means there are 50% users clicking at least 38% of songs from certain artists. Is it a good thing or a bad thing? This is a subjective question, if you love to try new stuff, then don’t let herding bias constrain yourself!
+We find there are **160 people out of 1022 people (only 16%)** don’t have herding bias, and the median value is of **herding bias is 0.38**. Which means, users commonly listen, at least 38%, songs from certain artists. Is it a good thing or a bad thing? This is a subjective question, if you love to try new stuff, then don’t let herding bias constrain yourself!
 
 ### Tendency of Hearing Singers' Voice, not the Songs
-Are songs from popular artists usually popular? We collect 25 popular and 20 unpopular artists in 2010, and analyze the song hotness of their songs. Surprisingly, it differs a lot!
+Are songs from popular artists usually popular? We collect **25 popular** and **20 unpopular artists** in 2010, and analyze the song hotness of their songs. Surprisingly, it differs a lot!
 
 <img src="img/Q2_2.PNG" class="img-centered">
 
-This kind of phenomenon is like “Rich gets richer”, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: 
+This kind of phenomenon is like **“Rich gets richer”**, once you gain more connections (popularity), the more possible that your songs will be popular. Now, let’s observe the clickthrough rate of 2 popular artists in 2017: 
 
 <button class="button" onclick="changeTableContentQ2('Ed_Sheeran')">Ed Sheeran</button>
 <button class="button" onclick="changeTableContentQ2('Alan_Walker')">Alan Walker</button>
@@ -134,7 +134,7 @@ The scatter plot tells us artists may need to seize the opportunity in their fir
 
 <div class="clearfix">
 <img src="img/Psy.jpg" class="img3" width="180px" height="240px">
- The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Phy and Phy’s new songs are always popular.</div>
+ The Korean artist, Psy, becomes extremely popular because of the song “Gangnam Style”. On May 31, 2014, the video for “Gangnam Style” hit 2 billion views, and since then, Psy and Psy’s new songs are always popular.</div>
 
 <div class="clearfix">
 <img src="img/Taylor_Swift.jpg" class="img2" width="180px" height="240px">
@@ -144,7 +144,8 @@ The scatter plot tells us artists may need to seize the opportunity in their fir
 
 <h2 style="text-align: center;"> Lyrics of Songs </h2>
 
-Do people tend to listen to songs that contains certain terms or themes? Do popular songs themes differ from the ones discussed in unpopular tracks?
+Do people tend to listen to songs that contains certain terms or themes?
+<br>Here we only display the figures for the popular songs.
 
 <div id="drop" align="center"></div>
 <svg width="100%" height="300" id="barChart"></svg>
@@ -158,14 +159,13 @@ Explanation:
 - Full count: we consider the full lyrics dataset without taking care of hotttnesss, we’re counting all the words for every tracks and summing them.
 - Top songs count: we repeat the previous operation, but this time on the top/worst songs.
 
-The results being very similar for the popular and unpopular songs we only display the figures for the popular songs.
-For the two first categories we have that the top word is by far ‘yeah'. Hence as a first conclusion we might say people do not really care about lyrics as 'yeah' isn't related to any specific topic. Appart from 'yeah' we can see a lot of top words concerning themes such as youth, the world/people, and verbs that refer to desire(wish, want…).
+The results being very similar for the popular and unpopular songs in which for the two first categories we have that the top word is by far ‘yeah'. Hence as a first conclusion we might say **people do not really care about lyrics** as **'yeah'** isn't related to any specific topic. Apart from 'yeah' we can see a lot of top words concerning themes such as youth, world, and verbs that refer to desire(wish, want).
 
-For the two remaining categories we have a different result. Over all the songs we can see that the most recurrent word is 'love' and there are many other high-ranked words that recall feelings (feel, like, want, baby, heart, girl...).
+For the two remaining categories we have a different result. Over all the songs we can see that the most recurrent word is **'love'** and there are many other high-ranked words that recall **feelings** (feel, like, want, baby, heart, girl). So emotional, isn't?
 
 ### Sentiment Analysis of Songs
 
-From a list of positively/negatively connoted words we determine whether a popular song is usually positive(happy) or negative(sad).
+From a list of positively/negatively connoted words, lets determine whether a popular song is usually positive(happy) or negative(sad).
 
 <div id="pieChartQ3_1"></div>
 {% include_relative _includes/c3_chart_pie_q3_1.html %}
@@ -181,7 +181,11 @@ We have about **43.6% positive songs** and **56.4% negative songs** for the trac
 
 We have a ratio of **30.6% top songs** contain **bad words**. For the **unpopular songs** we get lower ratio of **22.1%**. So people might be more interested in borderline songs ?
 
-### Example of Users behaviours Analysis
+* * *
+
+<h2 style="text-align: center;"> Users Behaviours Analysis </h2>
+
+Now, we give an example of analyzing user behavior in listening songs according to playcount distribution, favorite singer, herding bias, and genres.
 
 <button class="button" onclick="changeUserContent('user1')">User 1</button>
 <button class="button" onclick="changeUserContent('user2')">User 2</button>
@@ -203,3 +207,15 @@ The genre this user love the most:
 <svg width="100%" height="300" id="barChartQ4_2"></svg>
 
 {% include_relative _includes/d3_chart_bar_q4.html %}
+
+* * *
+
+<h2 style="text-align: center;"> Conclusions </h2>
+
+Using million song dataset, we elaborate more about how people react to songs, especially for popular and unpopular songs. We come to conclusion of:
+
+* People listen to his/her favorite artists. This is proven by important features of random forest classifier and analysis of herding bias phenomeon. This is widely known as "*Rich become Richer*", meaning **popular artist tend to become more popular**.
+* People do **care more** about his/her **favorite artist** rather than **the songs itself**. We can see for both popular and unpopular songs; both have "*yeah*" as most commonly word in lyrics, both **contains more negative words** rather than positive ones, and both composed with **slang words**.
+
+
+#### That's all of our project. Thanks for reading and keep listening from different singers :)
