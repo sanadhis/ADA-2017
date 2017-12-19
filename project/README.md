@@ -110,8 +110,8 @@ In other words, we want to see whether the songs sung by popular singers are usu
 * Visualize to show the difference of song_hotttnesss between popular singers and unpopular singers
 * Observation & Comment 
 
-### Q2.3 Whether the first song of the singer matters for his/her career
-In this problem, we also focus on popular singers. We want to see whether the first song of this singer has some correlation with his/her career. To be more precise, we want to see whether the first song of the popular singer is usually popular, and the first songs opens his/her career. In real world, we could really find this phenomenon, for example, the korean singer psy became famous with the song 'gangnam style'.
+### Q2.3 Whether the singer's songs in his/her first year matter for his/her career
+In this problem, we also focus on popular singers. We want to see whether the singer's songs in the first year have some correlation with his/her career. To be more precise, we want to see whether the first song of the popular singer is usually popular, and the first songs opens his/her career. In real world, we could really find this phenomenon, for example, the korean singer psy became famous with the song 'gangnam style'.
 #### Design of experiment:
 * Load the dataset into dataframe
 * Data wrangling & Choose several popular/unpopular singers and extract their songs in the first year
